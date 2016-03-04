@@ -2,24 +2,34 @@
 #define PETAK_H
 /* Definisi Kelas Petak */
 
-#include "ListMakhluk.h"
+//#include "ListMakhluk.h"
+#include <iostream>
+#include <cstdlib>
+
+//#define WIDTH 20
+//#define HIGH 20
+
+#define ListOfMakhluk int
 
 class Petak {
 	public :
 		Petak();
-		Petak(const Petak&);
+		Petak(int, int);
 		~Petak();
-		Petak& operator= (const Petak&);
-		//getter list?
-		//setter list?
+
 		int TotalMakhlukinPetak();
-		
+		void spawn();
+		void showWorld();
+		void UpdateWorld();
 		
 	private :
-		ListOfMakhluk Cell[WIDTH][HIGH];
+		ListOfMakhluk **Cell;
 		int nMakhluk;
+		int panjang;
+		int lebar;
 		
 };
 
 #endif //PETAK_H
+
 

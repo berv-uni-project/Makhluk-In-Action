@@ -6,13 +6,14 @@
 class MakhlukTerbang : public Makhluk {
 	public :
 		MakhlukTerbang();
+		MakhlukTerbang(int a,int b);
 		MakhlukTerbang(const MakhlukTerbang&);
 		~MakhlukTerbang();
 		MakhlukTerbang& operator= (const MakhlukTerbang&);
-		
-		void spawn(int,int);
+		void spawn(int a, int b) ;
 		void move(); //terbang
 		void dead();
+		
 		
 	private :
 		

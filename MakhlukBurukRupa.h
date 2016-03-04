@@ -6,11 +6,14 @@
 class MakhlukBurukRupa : public Makhluk {
 	public :
 		MakhlukBurukRupa();
+		MakhlukBurukRupa(int a,int b);
 		MakhlukBurukRupa(const MakhlukBurukRupa&);
 		~MakhlukBurukRupa();
 		MakhlukBurukRupa& operator= (const MakhlukBurukRupa&);
+		void spawn(int a, int b) ;
 		
 		void move(); //jalankayazombie
+		void dead();
 		
 	private :
 		
