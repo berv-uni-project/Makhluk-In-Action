@@ -9,8 +9,9 @@ class MakhlukMonster : public Makhluk {
 		MakhlukMonster(const MakhlukMonster&);
 		~MakhlukMonster();
 		MakhlukMonster& operator= (const MakhlukMonster&);
-		
-		void move(); //jalannya random banget bisa blink, susah dibunuh
+		void spawn(int a, int b) ;
+		void move(int a, int b); //jalannya random banget bisa blink, susah dibunuh
+		void dead();
 		
 	private :
 		
