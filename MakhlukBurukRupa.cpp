@@ -1,5 +1,7 @@
 #include "MakhlukBurukRupa.h"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -64,7 +66,7 @@ void MakhlukBurukRupa::spawn(int a, int b){
 	y = b;
 }
 
-void MakhlukBurukRupa::move(int a, int b){
+void MakhlukBurukRupa::move(){
 	/*Melakukan Perpindahan pada 
 	* MakhlukBurukRupa // belum pasti
 	*@param a <a merupakan angka random dari kelas petak untuk x>
@@ -72,8 +74,14 @@ void MakhlukBurukRupa::move(int a, int b){
 	*belum pasti
 	*/
 	cout <<"move MakhlukBurukRupa" <<endl;
-	x = x + a;
-	y = y + b;
+	int r1,r2;
+	int x,y = 0;
+	srand(time(NULL));
+	r1= rand() % 3 -1  ;
+	srand(1);
+	r2= rand() % 3 -1 ;
+	x = x + r1;
+	y = y + r2;	
 }
 
 void MakhlukBurukRupa::dead(){

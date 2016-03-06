@@ -1,5 +1,7 @@
 #include "MakhlukMonster.h"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -73,10 +75,13 @@ void MakhlukMonster::move(){
 	*/
 	cout <<"move MakhlukMonster" <<endl;
 	int r1,r2;
-	r1= rand() % 2 -1;
-	r2= rand() % 2 -1;
+	int x,y = 0;
+	srand(time(NULL));
+	r1= rand() % 3 -1  ;
+	srand(1);
+	r2= rand() % 3 -1 ;
 	x = x + r1;
-	y = y + r2;
+	y = y + r2;	
 }
 
 void MakhlukMonster::dead(){

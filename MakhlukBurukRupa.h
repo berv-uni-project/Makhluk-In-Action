@@ -12,9 +12,8 @@ class MakhlukBurukRupa : public Makhluk {
 		MakhlukBurukRupa& operator= (const MakhlukBurukRupa&);
 		void spawn(int a, int b) ;
 		
-		void move(int a, int b); //jalankayazombie
+		void move(); //jalankayazombie
 		void dead();
-		void move(); 
 		
 	private :
 		
