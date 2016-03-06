@@ -7,17 +7,29 @@ using namespace std;
 * Ctor untuk petak, menginisialisasi seluruh cell dengan ctor list of mahkluk
 **/
 
-#define Nil 0
-
+#define Nil NULL
+/*
 Petak::Petak()
 {
-	for (int i=0; i < WIDTH; i++)
-	{
-		for (int j=0; j < HIGH; j++)
-		{
-			Cell[i][j] = Nil;//(i,j);
-		}
-	}
+	panjang = 10;
+	lebar  = 10;
+	**Cell = new ListOfMakhluk*[panjang];
+	for (int i = 0; i<panjang; i++)
+		Cell[i] = new ListOfMakhluk[lebar];
+
+	cout << "ctor petak" << endl;
+}
+*/
+
+Petak::Petak(int _panjang = 0, int _lebar = 0)
+{
+	panjang = _panjang;
+	lebar  = _lebar;
+	Cell = new ListOfMakhluk *[panjang];
+	for (int i = 0; i<panjang; i++)
+		Cell[i] = new ListOfMakhluk[lebar];
+
+	cout << "ctor petak" << endl;
 }
 
 /**
@@ -25,9 +37,10 @@ Petak::Petak()
 **/
 Petak::~Petak()
 {
-	for (int i=0; i<WIDTH; i++)
+	for (int i=0; i<panjang; i++)
 		delete [] Cell;
 	delete [] Cell;
+	cout << "dtor petak" << endl;
 }
 
 
@@ -36,35 +49,41 @@ Petak::~Petak()
 **/
 void Petak::spawn()
 {
-//	int kolom = rand() % WIDTH + 1;
-//	int baris = rand() % HIGH + 1;
+	srand(0);
+	int kolom = rand() % panjang + 1;
+	int baris = rand() % lebar + 1;
 
 //	Cell[i][j].AddMakhluk();
+	Cell[kolom][baris] = 1;
 	nMakhluk++;
+
+	cout << "spawn" << endl;
 }
 
 
 /**
-* Update seluru petak dan menampilkan makhluk yang ada
+* Update seluruh petak dan menampilkan makhluk yang ada
 **/
 void Petak::showWorld()
 {
-	for (int i=0; i < WIDTH; i++)
+	for (int i=0; i < panjang; i++)
 	{
-		for (int j=0; j < HIGH; j++)
+		for (int j=0; j < lebar; j++)
 		{
 			cout << "|";
-			if (Cell[i][j]!=Nil)
-				cout << Cell[i][j];//.show();
-			else
-				cout << "  ";
+//			if (Cell[i][j]!=Nil)
+//				cout << " " << Cell[i][j] << " ";//.show();
+//			else
+				cout << "   ";
 		}
 		cout << endl;
 	}
+	cout << "tampilan petak" << endl;
 }
 
 int Petak::TotalMakhlukinPetak()
 {
+	cout << "total mahkluk" << endl;
 	return nMakhluk;
 }
 

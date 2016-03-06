@@ -6,14 +6,15 @@
 #include <iostream>
 #include <cstdlib>
 
-#define WIDTH 20
-#define HIGH 20
+//#define WIDTH 20
+//#define HIGH 20
 
 #define ListOfMakhluk int
 
 class Petak {
 	public :
 		Petak();
+		Petak(int, int);
 //		Petak(const Petak&);
 		~Petak();
 //		Petak& operator= (const Petak&);
@@ -25,8 +26,10 @@ class Petak {
 		void showWorld();
 		
 	private :
-		ListOfMakhluk Cell[WIDTH][HIGH];
+		ListOfMakhluk **Cell;
 		int nMakhluk;
+		int panjang;
+		int lebar;
 		
 };
 
