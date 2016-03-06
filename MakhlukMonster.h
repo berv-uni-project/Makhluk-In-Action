@@ -11,7 +11,7 @@ class MakhlukMonster : public Makhluk {
 		~MakhlukMonster();
 		MakhlukMonster& operator= (const MakhlukMonster&);
 		void spawn(int a, int b) ;
-		void move(int a, int b); //jalannya random banget bisa blink, susah dibunuh
+		void move(); //jalannya random banget bisa blink, susah dibunuh
 		void dead();
 		
 	private :

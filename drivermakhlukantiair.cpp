@@ -9,7 +9,7 @@ int main(){
 	MakhlukAntiAir test2;
 	test2=test1;
 	test2.spawn(1,2);
-	test2.move(1,2);
+	test2.move();
 	test2.dead();
 	
 	return 0;

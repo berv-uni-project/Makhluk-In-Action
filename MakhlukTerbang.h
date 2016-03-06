@@ -11,7 +11,7 @@ class MakhlukTerbang : public Makhluk {
 		~MakhlukTerbang();
 		MakhlukTerbang& operator= (const MakhlukTerbang&);
 		void spawn(int a, int b) ;
-		void move(int a, int b); //terbang
+		void move(); //terbang
 		void dead();
 		
 		

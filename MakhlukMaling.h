@@ -12,7 +12,7 @@ class MakhlukMaling : public Makhluk {
 		MakhlukMaling& operator= (const MakhlukMaling&);
 		void spawn(int a, int b) ;
 		
-		void move(int a, int b); //jalancepetbanget
+		void move(); //jalancepetbanget
 		void dead();
 		
 	private :

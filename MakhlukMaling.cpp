@@ -64,7 +64,7 @@ void MakhlukMaling::spawn(int a, int b){
 	y = b;
 }
 
-void MakhlukMaling::move(int a, int b){
+void MakhlukMaling::move(){
 	/*Melakukan Perpindahan pada 
 	* MakhlukMaling // belum pasti
 	*@param a <a merupakan angka random dari kelas petak untuk x>
@@ -72,8 +72,11 @@ void MakhlukMaling::move(int a, int b){
 	*belum pasti
 	*/
 	cout <<"move MakhlukMaling" <<endl;
-	x = x + a;
-	y = y + b;
+	int r1,r2;
+	r1= rand() % 2 -1;
+	r2= rand() % 2 -1;
+	x = x + r1;
+	y = y + r2;
 }
 
 void MakhlukMaling::dead(){

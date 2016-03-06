@@ -1,5 +1,6 @@
 #include "MakhlukTerbang.h"
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -64,7 +65,7 @@ void MakhlukTerbang::spawn(int a, int b){
 	y = b;
 }
 
-void MakhlukTerbang::move(int a, int b){
+void MakhlukTerbang::move(){
 	/*Melakukan Perpindahan pada 
 	* MakhlukTerbang // belum pasti
 	*@param a <a merupakan angka random dari kelas petak untuk x>
@@ -72,8 +73,11 @@ void MakhlukTerbang::move(int a, int b){
 	*belum pasti
 	*/
 	cout <<"move MakhlukTerbang" <<endl;
-	x = x + a;
-	y = y + b;
+	int r1,r2;
+	r1= rand() % 2 -1;
+	r2= rand() % 2 -1;
+	x = x + r1;
+	y = y + r2;
 }
 
 void MakhlukTerbang::dead(){
