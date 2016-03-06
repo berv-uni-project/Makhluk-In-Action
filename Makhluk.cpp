@@ -4,6 +4,9 @@
 using namespace std;
 
 Makhluk::Makhluk(){
+	/*Constructor Makhluk Abstrak
+	semua atribut diinisialisasi 0
+	*/
 	cout<<"ctor Makhluk"<<endl;
 	age = 0;
 	powerlevel = 0;
@@ -13,6 +16,9 @@ Makhluk::Makhluk(){
 }
 
 Makhluk::Makhluk(const Makhluk& M){
+	/*Copy Constructor Makhluk Abstrak
+	@param M <M merupakan Makhluk abstrak dimana semua atributnya akan di copy ke Makhluk ini>
+	*/
 	cout<<"cctor Makhluk"<<endl;
 	age = M.age;
 	powerlevel = M.powerlevel;
@@ -22,10 +28,15 @@ Makhluk::Makhluk(const Makhluk& M){
 }
 
 Makhluk::~Makhluk(){
+	/*Destuctor Makhluk Abstrak
+	*/
 	cout<<"dtor Makhluk"<<endl;
 }
 
 Makhluk& Makhluk::operator= (const Makhluk& M){
+	/*Operator = Makhluk Abstrak
+	@param M <M merupakan Makhluk abstrak dimana semua atributnya akan di copy ke Makhluk ini>
+	*/
 	cout<<"operator = Makhluk"<<endl;
 	age = M.age;
 	powerlevel = M.powerlevel;
@@ -33,11 +44,5 @@ Makhluk& Makhluk::operator= (const Makhluk& M){
 	x = M.x;
 	y = M.y;
 	return *this;
-}
-
-void Makhluk::spawn(int a,int b){
-	cout <<"spawn" <<endl;
-	x = a;
-	y = b;
 }
 
