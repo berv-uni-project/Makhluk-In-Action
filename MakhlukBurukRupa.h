@@ -6,6 +6,7 @@
 class MakhlukBurukRupa : public Makhluk {
 	public :
 		MakhlukBurukRupa();
+		MakhlukBurukRupa(int a,int b);
 		MakhlukBurukRupa(const MakhlukBurukRupa&);
 		~MakhlukBurukRupa();
 		MakhlukBurukRupa& operator= (const MakhlukBurukRupa&);

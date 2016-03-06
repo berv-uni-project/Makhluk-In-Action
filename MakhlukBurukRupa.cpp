@@ -13,6 +13,18 @@ MakhlukBurukRupa::MakhlukBurukRupa(){
 	deltaT = 10.0; 
 }
 
+MakhlukBurukRupa::MakhlukBurukRupa(int a,int b){
+	/*constructor dari kelas MakhlukBurukRupa
+	Belum pasti
+	*/
+	cout <<"ctor MakhlukBurukRupa" <<endl;
+	age = 50;
+	powerlevel = 100;
+	deltaT = 10.0; 
+	x = a;
+	y = b;
+}
+
 MakhlukBurukRupa::MakhlukBurukRupa(const MakhlukBurukRupa& M){
 	/*copy constructor dari kelas MakhlukBurukRupa
 	*@param M <Semua atribut MakhlukBurukRupa akan diisi dengan atribut M yang juga MakhlukBurukRupa>

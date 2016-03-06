@@ -6,6 +6,7 @@
 class MakhlukMaling : public Makhluk {
 	public :
 		MakhlukMaling();
+		MakhlukMaling(int a,int b);
 		MakhlukMaling(const MakhlukMaling&);
 		~MakhlukMaling();
 		MakhlukMaling& operator= (const MakhlukMaling&);

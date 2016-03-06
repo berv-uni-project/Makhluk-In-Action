@@ -6,6 +6,7 @@
 class MakhlukAntiAir : public Makhluk {
 	public :
 		MakhlukAntiAir();
+		MakhlukAntiAir(int a,int b);
 		MakhlukAntiAir(const MakhlukAntiAir&);
 		~MakhlukAntiAir();
 		MakhlukAntiAir& operator= (const MakhlukAntiAir&);
