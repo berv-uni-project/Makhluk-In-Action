@@ -4,22 +4,49 @@
 
 #include "Makhluk.h"
 
+class Node{
+	friend class ListMakhluk;
+private : 
+	Makhluk Mem;
+	Node * NextP;
+public :
+	Node();
+	Node(Makhluk& val);
+	Node(Makhluk& val, Node* next);
+//	Node(const Node&);
+	//Node& operator= (const Node&);
+	~Node();
+	Makhluk& GetVal();
+	Node * Next();
+	void SetVal(Makhluk& val); 
+};
+
+
 class ListMakhluk {
 	public :
 		ListMakhluk();
-		ListMakhluk(const ListMakhluk&);
 		~ListMakhluk();
-		ListMakhluk& operator= (const ListMakhluk&);
-		void AddMakhluk();
-		void DeleteMakhluk();
+		
+		void AddMakhluk(Makhluk&);
+		void DeleteMakhluk(Makhluk&);
+		void DeleteFirst();
+		void DeleteAfter(Node*);
+		void DeleteLast();
 		bool isFull();
 		bool isEmpty();
+		
 		void SurvFight();
 		
+		Node * GetFirst();
+		int GetnMakhluk();
+		void SetnMakhluk(int );
+		
 	private :
-		Makhluk* member;
+		Node * First;
 		int nMakhluk;
-		const static MaxMakhluk;
+		const static int MaxMakhluk;
+		int Ordinat;
+		int Absis;
 		
 };
 
