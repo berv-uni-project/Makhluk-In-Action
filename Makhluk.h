@@ -9,9 +9,10 @@ class Makhluk {
 		Makhluk(const Makhluk&);
 		~Makhluk();
 		Makhluk& operator= (const Makhluk&);
-		virtual void spawn(int _x,int _y) = 0;
-		virtual void move() = 0;
-		virtual void dead() = 0;
+		virtual void spawn(int a, int b)=0 ;
+		virtual void move() =0;
+		virtual void dead() =0;
+		int getpowerlevel();
 		
 	protected :
 		int age;
