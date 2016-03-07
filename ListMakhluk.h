@@ -2,21 +2,21 @@
 #define LISTMAKHLUK_H
 /* Definisi Kelas List Makhluk */
 
-#include "Makhluk.h"
+#include "MakhlukAntiAir.h"
+#include "MakhlukBurukRupa.h"
+#include "MakhlukMaling.h"
+#include "MakhlukMonster.h"
+#include "MakhlukTerbang.h"
 
 class Node{
 	friend class ListMakhluk;
 private : 
-	Makhluk Mem;
+	Makhluk * Mem;
 	Node * NextP;
 public :
 	Node();
-	Node(Makhluk& val);
-	Node(Makhluk& val, Node* next);
-//	Node(const Node&);
-	//Node& operator= (const Node&);
 	~Node();
-	Makhluk& GetVal();
+	Makhluk* GetVal();
 	Node * Next();
 	void SetVal(Makhluk& val); 
 };
@@ -27,19 +27,20 @@ class ListMakhluk {
 		ListMakhluk();
 		~ListMakhluk();
 		
-		void AddMakhluk(Makhluk&);
+		void AddMakhluk(Makhluk*);
 		//void DeleteMakhluk(Makhluk&);
-		Makhluk DeleteFirst();
-		Makhluk DeleteAfter(Node*);
-		Makhluk DeleteLast();
+		Makhluk* DeleteFirst();
+		Makhluk* DeleteAfter(Node*);
+		Makhluk* DeleteLast();
 		bool isFull();
 		bool isEmpty();
 		
-		//void SurvFight();
+		void SurvFight();
 		
 		Node * GetFirst();
 		int GetnMakhluk();
 		void SetnMakhluk(int );
+		void showlist();
 		
 	private :
 		Node * First;
