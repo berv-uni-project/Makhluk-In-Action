@@ -13,6 +13,8 @@ class Makhluk {
 		virtual void move() =0;
 		virtual void dead() =0;
 		int getpowerlevel();
+		int getage();
+		double getdeltaT();
 		
 	protected :
 		int age;
