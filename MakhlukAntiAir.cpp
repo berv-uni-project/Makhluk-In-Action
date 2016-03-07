@@ -16,7 +16,7 @@ MakhlukAntiAir::MakhlukAntiAir(){
 }
 
 MakhlukAntiAir::MakhlukAntiAir(int a,int b){
-	/* \var MakhlukAntiAir(int a,int b)
+	/* ! \var MakhlukAntiAir(int a,int b)
 	\brief Constructor Parameter Kelas MakhlukAntiAir
 	\param a input posisi untuk x 
 	\param b input posisi untuk y
@@ -30,7 +30,7 @@ MakhlukAntiAir::MakhlukAntiAir(int a,int b){
 }
 
 MakhlukAntiAir::MakhlukAntiAir(const MakhlukAntiAir& M){
-	/* \var MakhlukAntiAir(const MakhlukAntiAir& M)
+	/* ! \var MakhlukAntiAir(const MakhlukAntiAir& M)
 	\brief Copy constructor Kelas MakhlukAntiAir
 	\param M Semua atribut MakhlukAntiAir akan diisi dengan atribut M yang juga merupakan MakhlukAntiAir
 	*/
@@ -41,14 +41,14 @@ MakhlukAntiAir::MakhlukAntiAir(const MakhlukAntiAir& M){
 }
 
 MakhlukAntiAir::~MakhlukAntiAir(){
-	/*\var ~MakhlukAntiAir()
+	/* ! \var ~MakhlukAntiAir()
 	\brief Destructor Kelas MakhlukAntiAir
 	*/
 	cout <<"dtor MakhlukAntiAir" <<endl;
 }
 
 MakhlukAntiAir& MakhlukAntiAir::operator= (const MakhlukAntiAir& M ){
-	/* \var MakhlukAntiAir& operator=(const MakhlukAntiAir& M)
+	/* ! \var MakhlukAntiAir& operator=(const MakhlukAntiAir& M)
 	\brief Operator= Kelas MakhlukAntiAir
 	\param M Semua atribut MakhlukAntiAir akan diisi dengan atribut M yang juga MakhlukAntiAir
 	*/
@@ -60,7 +60,7 @@ MakhlukAntiAir& MakhlukAntiAir::operator= (const MakhlukAntiAir& M ){
 }
 
 void MakhlukAntiAir::spawn(int a, int b){
-	/*\var void spawn(int a,int b)
+	/* ! \var void spawn(int a,int b)
 	\brief spawn mengisi nilai x dan y dimana nilai a dan b berasal dari petak yang di random
 	\param a merupakan angka random dari kelas petak untuk x
 	\param b merupakan angka random dari kelas petak untuk y
@@ -71,7 +71,7 @@ void MakhlukAntiAir::spawn(int a, int b){
 }
 
 void MakhlukAntiAir::move(){
-	/* \var void move()
+	/* ! \var void move()
 	\brief Melakukan Perpindahan pada MakhlukAntiAir 
 	*/
 	cout <<"move MakhlukAntiAir" <<endl;
@@ -86,7 +86,7 @@ void MakhlukAntiAir::move(){
 }
 
 void MakhlukAntiAir::dead(){
-	/* \var void dead()
+	/* ! \var void dead()
 	\brief Prosedur berisi MakhlukAntiAir mati
 	*/
 	cout <<"dead MakhlukAntiAir" <<endl;
