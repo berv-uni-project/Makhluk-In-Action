@@ -5,18 +5,18 @@
 
 Node::Node(){
 	std::cout << "CTOR Node" << std::endl;
-	Makhluk Mem;
+	Mem = NULL;
 	NextP = NULL;
 }
-
+/*
 Node::Node(Makhluk& val){
-	Mem = val;
+	Mem = new Makhluk();
 	NextP = NULL;
 }
 Node::Node(Makhluk& val, Node* next){
 	Mem = val;
 	NextP = next;
-}
+}*/
 /*
 Node::Node(const Node& _N){
 	Mem = _N.Mem;
@@ -34,21 +34,18 @@ Node::~Node(){
 	if(NextP!=NULL){
 		delete NextP;
 	}
-	Mem.~Makhluk();
+	if(Mem != NULL){
+		delete &Mem;
+	}
 }
 
-Makhluk& Node::GetVal(){
-	Makhluk * A = new Makhluk;
-	*A = Mem;
-	return *A;
+Makhluk* Node::GetVal(){
+	return Mem;
 }
 
 Node * Node::Next(){
 	return NextP;
 }
-void Node::SetVal(Makhluk& val){
-	Mem = val;
-} 
 
 const int ListMakhluk::MaxMakhluk = 4;
 
@@ -69,18 +66,17 @@ ListMakhluk::~ListMakhluk(){
 		while(P!=NULL){
 			DeleteFirst();
 			P = First;
-			//std::cout << "++" << std::endl;
 		}
 	}
 }
 
-void ListMakhluk::AddMakhluk(Makhluk& _M){
+void ListMakhluk::AddMakhluk(Makhluk * _M){
 	Node* P;
 	Node * Psave;
 	if(!isFull()){
-	//	std::cout<<"Kucing\n";
 		P = GetFirst();
-		Psave = new Node(_M);
+		Psave = new Node();
+		Psave -> Mem = _M;
 		if(P==NULL){
 			First = Psave;
 		}else{
@@ -90,73 +86,61 @@ void ListMakhluk::AddMakhluk(Makhluk& _M){
 		}
 		nMakhluk++;
 	}else{
-		/*SurvFight();
+		SurvFight();
 		P = GetFirst();
-		while((P->NextP)!=NULL){
-			P = P->NextP;
+		Psave = new Node();
+		Psave -> Mem = _M;
+		if(P==NULL){
+			First = Psave;
+		}else{
+			P = First;
+			First = Psave;
+			First -> NextP = P;
 		}
-		P->NextP = new Node(_M);*/
-		std::cout << "FULL Please delete Something\n"; 
+		nMakhluk++;
+		//std::cout << "FULL Please delete Something\n"; 
 	}
 }
 
-Makhluk ListMakhluk::DeleteFirst(){
+Makhluk * ListMakhluk::DeleteFirst(){
 	Makhluk * A;
 	
 	Node * P = First;
 	First = First->NextP;
-	P -> NextP = NULL; 
+	P -> NextP = NULL;
+	A = P->Mem; 
 	delete P;
 	nMakhluk--;
+	return A;
 }
 
-void ListMakhluk::DeleteLast(){
+Makhluk * ListMakhluk::DeleteLast(){
 	Node *P = First;
 	Node * PTemp;
+	Makhluk *A;
 	while((P->NextP)->NextP!=NULL){
 		P = P->Next();
 	}
 	PTemp = P->Next();
 	P->NextP = NULL;
 	PTemp->NextP = NULL;
+	A = PTemp->Mem;
 	delete PTemp;
 	nMakhluk--;
+	return A;
 }
 
-void ListMakhluk::DeleteAfter(Node * Px){
+Makhluk * ListMakhluk::DeleteAfter(Node * Px){
 	Node *P;
+	Makhluk *A;
 	P = Px->Next();
 	Px->NextP = P->Next();
 	P->NextP = NULL;
+	A = P->Mem;
 	delete P;
 	nMakhluk--;
+	return A;
 }
-/*
-void ListMakhluk::DeleteMakhluk(Makhluk& _M){
-	Node* P, PTemp;
-	bool found = false;
-	if(!isEmpty()){
-		if(_M.GetID()==(First->Mem).GetID){
-			DeleteFirst();
-		}else{
-			P = First;
-			while((!found)&&((P->NextP)!=NULL){
-				if((P->NextP)->Mem.GetID()==_M.GetID()){
-					found = True;
-				}else{
-					P = P->NextP;
-				}
-			}
-			if(found){
-				DeleteAfter(P);
-			}else{
-				DeleteLast();
-			}
-		}
-	}
-}
-*/
-
 
 bool ListMakhluk::isFull(){
 	return (nMakhluk==MaxMakhluk);
@@ -165,24 +149,28 @@ bool ListMakhluk::isEmpty(){
 	return (nMakhluk==0);
 }
 void ListMakhluk::SurvFight(){
-	int PowerLevelmin;
+	int PowerLevelMin;
 	Node * PBefore;
 	Node * P = First;
+	Makhluk * A;
 	
 	PBefore = NULL;
-	PowerLevelMin = (P->Mem).GetPowerLevel();
+	PowerLevelMin = (P->Mem)->getpowerlevel();
 	while(P->NextP!=NULL){
-		if(PowerLevelMin > (P->NextP)->Mem.GetPowerLevel()){
-			PowerLevelMin = (P->NextP)->Mem.GetPowerLevel()
+		if(PowerLevelMin > (P->NextP)->Mem->getpowerlevel()){
+			PowerLevelMin = (P->NextP)->Mem->getpowerlevel();
 		}
 		P = P->NextP;
 	}
 	if(PBefore == NULL){
-		DeleteFirst();
+		A = DeleteFirst();
+		delete &A;
 	}else{
-		DeleteAfter(PBefore);
+		A = DeleteAfter(PBefore);
+		delete &A;
 	}
 }
+
 Node * ListMakhluk::GetFirst(){
 	return First;
 }
@@ -194,3 +182,9 @@ void ListMakhluk::SetnMakhluk(int n){
 	nMakhluk = n;
 }
 		
+void ListMakhluk::showlist(){
+	P = First;
+	while(P!=NULL){
+		P->Mem->showme();
+	}
+}
