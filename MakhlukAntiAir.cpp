@@ -4,15 +4,17 @@
 #include <ctime>
 
 using namespace std;
+/* Makhluk Anti Air bentuknya '*' */
 
 MakhlukAntiAir::MakhlukAntiAir(){
 	/*! \var MakhlukAntiAir()
 	\brief Constructor Kelas MakhlukAntiAir menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukAntiAir" <<endl;
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	bentuk = '*';
+	age = 90; //lambat mati
+	powerlevel = 60; //cukup lemah
+	deltaT = 0.8;  //cukup lambat
 }
 
 MakhlukAntiAir::MakhlukAntiAir(int a,int b){
@@ -22,9 +24,10 @@ MakhlukAntiAir::MakhlukAntiAir(int a,int b){
 	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukAntiAir" <<endl;
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	bentuk = '*';
+	age = 90; //lambat mati
+	powerlevel = 60; //cukup lemah
+	deltaT = 0.8;  //cukup lambat
 	x = a;
 	y = b;
 }
@@ -35,6 +38,7 @@ MakhlukAntiAir::MakhlukAntiAir(const MakhlukAntiAir& M){
 	\param M Semua atribut MakhlukAntiAir akan diisi dengan atribut M yang juga merupakan MakhlukAntiAir
 	*/
 	cout <<"cctor MakhlukAntiAir" <<endl;
+	bentuk = M.bentuk;
 	age = M.age ;
 	powerlevel = M.powerlevel ;
 	deltaT = M.deltaT ;
@@ -53,6 +57,7 @@ MakhlukAntiAir& MakhlukAntiAir::operator= (const MakhlukAntiAir& M ){
 	\param M Semua atribut MakhlukAntiAir akan diisi dengan atribut M yang juga MakhlukAntiAir
 	*/
 	cout <<"operator =  MakhlukAntiAir" <<endl;
+	bentuk = M.bentuk;
 	age = M.age;
 	powerlevel = M.powerlevel;
 	deltaT = M.deltaT;

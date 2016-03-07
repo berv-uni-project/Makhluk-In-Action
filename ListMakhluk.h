@@ -15,6 +15,7 @@ public :
 	Node(Makhluk& val, Node* next);
 //	Node(const Node&);
 	//Node& operator= (const Node&);
+	~Node();
 	Makhluk& GetVal();
 	Node * Next();
 	void SetVal(Makhluk& val); 
@@ -28,9 +29,9 @@ class ListMakhluk {
 		
 		void AddMakhluk(Makhluk&);
 		//void DeleteMakhluk(Makhluk&);
-		void DeleteFirst();
-		void DeleteAfter(Node*);
-		void DeleteLast();
+		Makhluk DeleteFirst();
+		Makhluk DeleteAfter(Node*);
+		Makhluk DeleteLast();
 		bool isFull();
 		bool isEmpty();
 		

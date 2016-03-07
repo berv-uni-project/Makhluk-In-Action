@@ -69,3 +69,7 @@ double Makhluk::getdeltaT() {
 	*/
 	return deltaT;
 }
+
+void Makhluk::showme() {
+	cout << bentuk;	
+}

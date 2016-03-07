@@ -6,30 +6,35 @@
 using namespace std;
 
 MakhlukTerbang::MakhlukTerbang(){
-	/*constructor dari kelas MakhlukTerbang
-	Belum pasti
+	/*! \var MakhlukTerbang()
+	\brief Constructor Kelas MakhlukTerbang menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukTerbang" <<endl;
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	bentuk = '&' ;
+	age = 30; // cepat mati
+	powerlevel = 70; //agak lemah
+	deltaT = 0.3; //cepat
 }
 
 MakhlukTerbang::MakhlukTerbang(int a,int b){
-	/*constructor dari kelas MakhlukTerbang
-	Belum pasti
+	/* ! \var MakhlukTerbang(int a,int b)
+	\brief Constructor Parameter Kelas MakhlukTerbang
+	\param a input posisi untuk x 
+	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukTerbang" <<endl;
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	bentuk = '&' ;
+	age = 30; // cepat mati
+	powerlevel = 70; //agak lemah
+	deltaT = 0.3; //cepat 
 	x = a;
 	y = b;
 }
 
 MakhlukTerbang::MakhlukTerbang(const MakhlukTerbang& M){
-	/*copy constructor dari kelas MakhlukTerbang
-	*@param M <Semua atribut MakhlukTerbang akan diisi dengan atribut M yang juga MakhlukTerbang>
+	/* ! \var MakhlukTerbang(const MakhlukTerbang& M)
+	\brief Copy constructor Kelas MakhlukTerbang
+	\param M Semua atribut MakhlukTerbang akan diisi dengan atribut M yang juga merupakan MakhlukTerbang
 	*/
 	cout <<"cctor MakhlukTerbang" <<endl;
 	age = M.age ;
@@ -38,14 +43,16 @@ MakhlukTerbang::MakhlukTerbang(const MakhlukTerbang& M){
 }
 
 MakhlukTerbang::~MakhlukTerbang(){
-	/*destructor dari kelas MakhlukTerbang
+	/* ! \var ~MakhlukTerbang()
+	\brief Destructor Kelas MakhlukTerbang
 	*/
 	cout <<"dtor MakhlukTerbang" <<endl;
 }
 
 MakhlukTerbang& MakhlukTerbang::operator= (const MakhlukTerbang& M ){
-	/*operator = dari kelas MakhlukTerbang
-	*@param M <Semua atribut MakhlukTerbang akan diisi dengan atribut M yang juga MakhlukTerbang>
+	/*! \var MakhlukTerbang& operator= (const MakhlukTerbang& M)
+	\brief operator = dari kelas MakhlukTerbang
+	\param M Semua atribut MakhlukTerbang akan diisi dengan atribut M yang juga MakhlukTerbang
 	*/
 	cout <<"operator =  MakhlukTerbang" <<endl;
 	age = M.age;
@@ -55,11 +62,10 @@ MakhlukTerbang& MakhlukTerbang::operator= (const MakhlukTerbang& M ){
 }
 
 void MakhlukTerbang::spawn(int a, int b){
-	/*spawn mengisi nilai x dan y 
-	* dimana nilai a dan b berasal dari petak
-	* yang di random
-	*@param a <a merupakan angka random dari kelas petak untuk x>
-	*@param b <bmerupakan angka random dari kelas petak untuk y>
+	/* ! \var void spawn(int a,int b)
+	\brief spawn mengisi nilai x dan y dimana nilai a dan b berasal dari petak yang di random
+	\param a merupakan angka random dari kelas petak untuk x
+	\param b merupakan angka random dari kelas petak untuk y
 	*/
 	cout <<"spawn MakhlukTerbang" <<endl;
 	x = a;
@@ -67,11 +73,8 @@ void MakhlukTerbang::spawn(int a, int b){
 }
 
 void MakhlukTerbang::move(){
-	/*Melakukan Perpindahan pada 
-	* MakhlukTerbang // belum pasti
-	*@param a <a merupakan angka random dari kelas petak untuk x>
-	*@param b <bmerupakan angka random dari kelas petak untuk y>
-	*belum pasti
+	/* ! \var void move()
+	\brief Melakukan Perpindahan pada MakhlukTerbang 
 	*/
 	cout <<"move MakhlukTerbang" <<endl;
 	int r1,r2;
@@ -85,7 +88,8 @@ void MakhlukTerbang::move(){
 }
 
 void MakhlukTerbang::dead(){
-	/*Berisi Jika Makhluk Mati prosedur
+	/* ! \var void dead()
+	\brief Prosedur berisi MakhlukTerbang mati
 	*/
 	cout <<"dead MakhlukTerbang" <<endl;
 }
