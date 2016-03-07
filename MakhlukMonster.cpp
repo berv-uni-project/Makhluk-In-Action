@@ -12,7 +12,7 @@ MakhlukMonster::MakhlukMonster(){
 	cout <<"ctor MakhlukMonster" <<endl;
 	bentuk = '%' ;
 	age = 60; // lambat mati
-	powerlevel = 70; //paling kuat
+	powerlevel = 100; //paling kuat
 	deltaT = 1.0; //lambat
 }
 
@@ -25,7 +25,7 @@ MakhlukMonster::MakhlukMonster(int a,int b){
 	cout <<"ctor MakhlukMonster" <<endl;
 	bentuk = '%' ;
 	age = 60; // lambat mati
-	powerlevel = 70; //paling kuat
+	powerlevel = 100; //paling kuat
 	deltaT = 1.0; //lambat 
 	x = a;
 	y = b;
