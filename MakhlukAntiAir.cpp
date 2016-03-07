@@ -12,9 +12,9 @@ MakhlukAntiAir::MakhlukAntiAir(){
 	*/
 	cout <<"ctor MakhlukAntiAir" <<endl;
 	bentuk = '*';
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	age = 90; //lambat mati
+	powerlevel = 60; //cukup lemah
+	deltaT = 0.8;  //cukup lambat
 }
 
 MakhlukAntiAir::MakhlukAntiAir(int a,int b){
@@ -25,9 +25,9 @@ MakhlukAntiAir::MakhlukAntiAir(int a,int b){
 	*/
 	cout <<"ctor MakhlukAntiAir" <<endl;
 	bentuk = '*';
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	age = 90; //lambat mati
+	powerlevel = 60; //cukup lemah
+	deltaT = 0.8;  //cukup lambat
 	x = a;
 	y = b;
 }
