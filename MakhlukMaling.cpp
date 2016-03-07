@@ -6,8 +6,8 @@
 using namespace std;
 
 MakhlukMaling::MakhlukMaling(){
-	/*constructor dari kelas MakhlukMaling
-	Belum pasti
+	/*! \var MakhlukMaling()
+	\brief Constructor Kelas MakhlukMaling menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukMaling" <<endl;
 	age = 50;
@@ -16,8 +16,10 @@ MakhlukMaling::MakhlukMaling(){
 }
 
 MakhlukMaling::MakhlukMaling(int a,int b){
-	/*constructor dari kelas MakhlukMaling
-	Belum pasti
+	/* ! \var MakhlukMaling(int a,int b)
+	\brief Constructor Parameter Kelas MakhlukMaling
+	\param a input posisi untuk x 
+	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukMaling" <<endl;
 	age = 50;
@@ -28,8 +30,9 @@ MakhlukMaling::MakhlukMaling(int a,int b){
 }
 
 MakhlukMaling::MakhlukMaling(const MakhlukMaling& M){
-	/*copy constructor dari kelas MakhlukMaling
-	*@param M <Semua atribut MakhlukMaling akan diisi dengan atribut M yang juga MakhlukMaling>
+	/* ! \var MakhlukMaling(const MakhlukMaling& M)
+	\brief Copy constructor Kelas MakhlukMaling
+	\param M Semua atribut MakhlukMaling akan diisi dengan atribut M yang juga merupakan MakhlukMaling
 	*/
 	cout <<"cctor MakhlukMaling" <<endl;
 	age = M.age ;
@@ -38,14 +41,16 @@ MakhlukMaling::MakhlukMaling(const MakhlukMaling& M){
 }
 
 MakhlukMaling::~MakhlukMaling(){
-	/*destructor dari kelas MakhlukMaling
+	/* ! \var ~MakhlukMaling()
+	\brief Destructor Kelas MakhlukMaling
 	*/
 	cout <<"dtor MakhlukMaling" <<endl;
 }
 
 MakhlukMaling& MakhlukMaling::operator= (const MakhlukMaling& M ){
-	/*operator = dari kelas MakhlukMaling
-	*@param M <Semua atribut MakhlukMaling akan diisi dengan atribut M yang juga MakhlukMaling>
+	/* ! \var MakhlukMaling& operator=(const MakhlukMaling& M)
+	\brief Operator= Kelas MakhlukMaling
+	\param M Semua atribut MakhlukMaling akan diisi dengan atribut M yang juga MakhlukMaling
 	*/
 	cout <<"operator =  MakhlukMaling" <<endl;
 	age = M.age;
@@ -55,11 +60,10 @@ MakhlukMaling& MakhlukMaling::operator= (const MakhlukMaling& M ){
 }
 
 void MakhlukMaling::spawn(int a, int b){
-	/*spawn mengisi nilai x dan y 
-	* dimana nilai a dan b berasal dari petak
-	* yang di random
-	*@param a <a merupakan angka random dari kelas petak untuk x>
-	*@param b <bmerupakan angka random dari kelas petak untuk y>
+	/* ! \var void spawn(int a,int b)
+	\brief spawn mengisi nilai x dan y dimana nilai a dan b berasal dari petak yang di random
+	\param a merupakan angka random dari kelas petak untuk x
+	\param b merupakan angka random dari kelas petak untuk y
 	*/
 	cout <<"spawn MakhlukMaling" <<endl;
 	x = a;
@@ -67,11 +71,8 @@ void MakhlukMaling::spawn(int a, int b){
 }
 
 void MakhlukMaling::move(){
-	/*Melakukan Perpindahan pada 
-	* MakhlukMaling // belum pasti
-	*@param a <a merupakan angka random dari kelas petak untuk x>
-	*@param b <bmerupakan angka random dari kelas petak untuk y>
-	*belum pasti
+	/* ! \var void move()
+	\brief Melakukan Perpindahan pada MakhlukMaling 
 	*/
 	cout <<"move MakhlukMaling" <<endl;
 	int r1,r2;
@@ -85,7 +86,8 @@ void MakhlukMaling::move(){
 }
 
 void MakhlukMaling::dead(){
-	/*Berisi Jika Makhluk Mati prosedur
+	/* ! \var void dead()
+	\brief Prosedur berisi MakhlukMaling mati
 	*/
 	cout <<"dead MakhlukMaling" <<endl;
 }

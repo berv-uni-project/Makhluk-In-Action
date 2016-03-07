@@ -4,8 +4,8 @@
 using namespace std;
 
 Makhluk::Makhluk(){
-	/*Constructor Makhluk Abstrak
-	semua atribut diinisialisasi 0
+	/*! \var Makhluk()
+		\brief Constructor Makhluk Abstrak semua atribut diinisialisasi 0
 	*/
 	cout<<"ctor Makhluk"<<endl;
 	age = 0;
@@ -16,8 +16,9 @@ Makhluk::Makhluk(){
 }
 
 Makhluk::Makhluk(const Makhluk& M){
-	/*Copy Constructor Makhluk Abstrak
-	@param M <M merupakan Makhluk abstrak dimana semua atributnya akan di copy ke Makhluk ini>
+	/* ! \var Makhluk(const Makhluk& M)
+		\brief Copy Constructor Makhluk Abstrak
+		\param M M merupakan Makhluk abstrak dimana semua atributnya akan di copy ke Makhluk ini
 	*/
 	cout<<"cctor Makhluk"<<endl;
 	age = M.age;
@@ -28,14 +29,16 @@ Makhluk::Makhluk(const Makhluk& M){
 }
 
 Makhluk::~Makhluk(){
-	/*Destuctor Makhluk Abstrak
+	/* ! \var ~Makhluk()
+	\brief Destuctor Makhluk Abstrak
 	*/
 	cout<<"dtor Makhluk"<<endl;
 }
 
 Makhluk& Makhluk::operator= (const Makhluk& M){
-	/*Operator = Makhluk Abstrak
-	@param M <M merupakan Makhluk abstrak dimana semua atributnya akan di copy ke Makhluk ini>
+	/* ! \var Makhluk& operator= (Makhluk& M)
+	\brief Operator = Makhluk Abstrak
+	\param M M merupakan Makhluk abstrak dimana semua atributnya akan di copy ke Makhluk ini
 	*/
 	cout<<"operator = Makhluk"<<endl;
 	age = M.age;
@@ -47,8 +50,22 @@ Makhluk& Makhluk::operator= (const Makhluk& M){
 }
 
 int Makhluk::getpowerlevel(){
+	/* ! \var int getpowerlevel()
+	\brief Memberikan keluaran isi dari powerlevel
+	*/
 	return powerlevel;
 }
 
+int Makhluk::getage() {
+	/* ! \var int getage()
+	\brief Memberikan keluaran isi dari age
+	*/
+	return age;	
+}
 
-
+double Makhluk::getdeltaT() {
+	/* ! \var double getdeltaT()
+	\brief Memberikan keluaran isi dari deltaT
+	*/
+	return deltaT;
+}
