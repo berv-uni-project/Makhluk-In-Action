@@ -48,10 +48,9 @@ MakhlukBurukRupa::~MakhlukBurukRupa(){
 }
 
 MakhlukBurukRupa& MakhlukBurukRupa::operator= (const MakhlukBurukRupa& M ){
-	/* ! \var void spawn(int a,int b)
-	\brief spawn mengisi nilai x dan y dimana nilai a dan b berasal dari petak yang di random
-	\param a merupakan angka random dari kelas petak untuk x
-	\param b merupakan angka random dari kelas petak untuk y
+	/* ! \var MakhlukBurukRupa& operator=(const MakhlukBurukRupa& M)
+	\brief Operator= Kelas MakhlukBurukRupa
+	\param M Semua atribut MakhlukBurukRupa akan diisi dengan atribut M yang juga MakhlukBurukRupa
 	*/
 	cout <<"operator =  MakhlukBurukRupa" <<endl;
 	age = M.age;
