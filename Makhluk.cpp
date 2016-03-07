@@ -50,5 +50,10 @@ int Makhluk::getpowerlevel(){
 	return powerlevel;
 }
 
+int Makhluk::getage() {
+	return age;	
+}
 
-
+double Makhluk::getdeltaT() {
+	return deltaT;
+}
