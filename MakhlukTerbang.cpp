@@ -10,9 +10,10 @@ MakhlukTerbang::MakhlukTerbang(){
 	\brief Constructor Kelas MakhlukTerbang menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukTerbang" <<endl;
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	bentuk = '&' ;
+	age = 30; // cepat mati
+	powerlevel = 70; //agak lemah
+	deltaT = 0.3; //cepat
 }
 
 MakhlukTerbang::MakhlukTerbang(int a,int b){
@@ -22,9 +23,10 @@ MakhlukTerbang::MakhlukTerbang(int a,int b){
 	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukTerbang" <<endl;
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	bentuk = '&' ;
+	age = 30; // cepat mati
+	powerlevel = 70; //agak lemah
+	deltaT = 0.3; //cepat 
 	x = a;
 	y = b;
 }
