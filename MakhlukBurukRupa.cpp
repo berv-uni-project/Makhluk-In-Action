@@ -6,8 +6,8 @@
 using namespace std;
 
 MakhlukBurukRupa::MakhlukBurukRupa(){
-	/*! \var MakhlukMaling()
-	\brief Constructor Kelas MakhlukMaling menginisialisasi atribut
+	/*! \var MakhlukBurukRupa()
+	\brief Constructor Kelas MakhlukBurukRupa menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukBurukRupa" <<endl;
 	age = 50;
@@ -16,8 +16,8 @@ MakhlukBurukRupa::MakhlukBurukRupa(){
 }
 
 MakhlukBurukRupa::MakhlukBurukRupa(int a,int b){
-	/* ! \var MakhlukMaling(int a,int b)
-	\brief Constructor Parameter Kelas MakhlukMaling
+	/* ! \var MakhlukBurukRupa(int a,int b)
+	\brief Constructor Parameter Kelas MakhlukBurukRupa
 	\param a input posisi untuk x 
 	\param b input posisi untuk y
 	*/
@@ -30,9 +30,9 @@ MakhlukBurukRupa::MakhlukBurukRupa(int a,int b){
 }
 
 MakhlukBurukRupa::MakhlukBurukRupa(const MakhlukBurukRupa& M){
-	/* ! \var MakhlukMaling(const MakhlukMaling& M)
-	\brief Copy constructor Kelas MakhlukMaling
-	\param M Semua atribut MakhlukMaling akan diisi dengan atribut M yang juga merupakan MakhlukMaling
+	/* ! \var MakhlukBurukRupa(const MakhlukBurukRupa& M)
+	\brief Copy constructor Kelas MakhlukBurukRupa
+	\param M Semua atribut MakhlukBurukRupa akan diisi dengan atribut M yang juga merupakan MakhlukBurukRupa
 	*/
 	cout <<"cctor MakhlukBurukRupa" <<endl;
 	age = M.age ;
@@ -41,8 +41,8 @@ MakhlukBurukRupa::MakhlukBurukRupa(const MakhlukBurukRupa& M){
 }
 
 MakhlukBurukRupa::~MakhlukBurukRupa(){
-	/* ! \var ~MakhlukMaling()
-	\brief Destructor Kelas MakhlukMaling
+	/* ! \var ~MakhlukBurukRupa()
+	\brief Destructor Kelas MakhlukBurukRupa
 	*/
 	cout <<"dtor MakhlukBurukRupa" <<endl;
 }
@@ -75,7 +75,7 @@ void MakhlukBurukRupa::spawn(int a, int b){
 
 void MakhlukBurukRupa::move(){
 	/* ! \var void move()
-	\brief Melakukan Perpindahan pada MakhlukMaling 
+	\brief Melakukan Perpindahan pada MakhlukBurukRupa 
 	*/
 	cout <<"move MakhlukBurukRupa" <<endl;
 	int r1,r2;
@@ -90,7 +90,7 @@ void MakhlukBurukRupa::move(){
 
 void MakhlukBurukRupa::dead(){
 	/* ! \var void dead()
-	\brief Prosedur berisi MakhlukMaling mati
+	\brief Prosedur berisi MakhlukBurukRupa mati
 	*/
 	cout <<"dead MakhlukBurukRupa" <<endl;
 }
