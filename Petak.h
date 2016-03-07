@@ -15,15 +15,12 @@ class Petak {
 	public :
 		Petak();
 		Petak(int, int);
-//		Petak(const Petak&);
 		~Petak();
-//		Petak& operator= (const Petak&);
-		//getter list?
-		//setter list?
 
 		int TotalMakhlukinPetak();
 		void spawn();
 		void showWorld();
+		void UpdateWorld();
 		
 	private :
 		ListOfMakhluk **Cell;
