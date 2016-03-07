@@ -14,5 +14,8 @@ ListMakhluk :
 	g++ Makhluk.cpp ListMakhluk.cpp MakhlukTerbang.cpp MakhlukAntiAir.cpp MakhlukAir.cpp MakhlukBurukRupa.cpp MakhlukMaling.cpp MakhlukMonster.cpp MakhlukTerbang.cpp mListMakhluk.cpp -o mListMakhluk
 Petak :
 	g++ Makhluk.cpp ListMakhluk.cpp MakhlukTerbang.cpp MakhlukAntiAir.cpp MakhlukAir.cpp MakhlukBurukRupa.cpp MakhlukMaling.cpp MakhlukMonster.cpp MakhlukTerbang.cpp Petak.cpp driverPetak.cpp -o driverPetak
-All :
+all :
 	g++ *.cpp -o main
+	
+clear :
+	rm *.o *.exe
