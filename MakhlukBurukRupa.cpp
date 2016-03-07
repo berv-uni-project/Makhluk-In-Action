@@ -10,6 +10,7 @@ MakhlukBurukRupa::MakhlukBurukRupa(){
 	\brief Constructor Kelas MakhlukBurukRupa menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukBurukRupa" <<endl;
+	bentuk = '$';
 	age = 50;
 	powerlevel = 100;
 	deltaT = 10.0; 
@@ -22,6 +23,7 @@ MakhlukBurukRupa::MakhlukBurukRupa(int a,int b){
 	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukBurukRupa" <<endl;
+	bentuk = '$';
 	age = 50;
 	powerlevel = 100;
 	deltaT = 10.0; 
@@ -35,6 +37,7 @@ MakhlukBurukRupa::MakhlukBurukRupa(const MakhlukBurukRupa& M){
 	\param M Semua atribut MakhlukBurukRupa akan diisi dengan atribut M yang juga merupakan MakhlukBurukRupa
 	*/
 	cout <<"cctor MakhlukBurukRupa" <<endl;
+	bentuk = M.bentuk;
 	age = M.age ;
 	powerlevel = M.powerlevel ;
 	deltaT = M.deltaT ;
@@ -53,6 +56,7 @@ MakhlukBurukRupa& MakhlukBurukRupa::operator= (const MakhlukBurukRupa& M ){
 	\param M Semua atribut MakhlukBurukRupa akan diisi dengan atribut M yang juga MakhlukBurukRupa
 	*/
 	cout <<"operator =  MakhlukBurukRupa" <<endl;
+	bentuk = M.bentuk();
 	age = M.age;
 	powerlevel = M.powerlevel;
 	deltaT = M.deltaT;
