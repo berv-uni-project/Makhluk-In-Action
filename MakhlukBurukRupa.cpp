@@ -11,9 +11,9 @@ MakhlukBurukRupa::MakhlukBurukRupa(){
 	*/
 	cout <<"ctor MakhlukBurukRupa" <<endl;
 	bentuk = '$';
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	age = 80; // lambat mati 
+	powerlevel = 80; //normal
+	deltaT = 0.7; //cukup lambat
 }
 
 MakhlukBurukRupa::MakhlukBurukRupa(int a,int b){
@@ -24,9 +24,9 @@ MakhlukBurukRupa::MakhlukBurukRupa(int a,int b){
 	*/
 	cout <<"ctor MakhlukBurukRupa" <<endl;
 	bentuk = '$';
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	age = 80; // lambat mati 
+	powerlevel = 80; //normal
+	deltaT = 0.7; //cukup lambat
 	x = a;
 	y = b;
 }
