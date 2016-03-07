@@ -10,9 +10,10 @@ MakhlukMonster::MakhlukMonster(){
 	\brief Constructor Kelas MakhlukMonster menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukMonster" <<endl;
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	bentuk = '%' ;
+	age = 60; // lambat mati
+	powerlevel = 70; //paling kuat
+	deltaT = 1.0; //lambat
 }
 
 MakhlukMonster::MakhlukMonster(int a,int b){
@@ -22,9 +23,10 @@ MakhlukMonster::MakhlukMonster(int a,int b){
 	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukMonster" <<endl;
-	age = 50;
-	powerlevel = 100;
-	deltaT = 10.0; 
+	bentuk = '%' ;
+	age = 60; // lambat mati
+	powerlevel = 70; //paling kuat
+	deltaT = 1.0; //lambat 
 	x = a;
 	y = b;
 }
