@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <iostream>
-#include "makhluk.h"
+#include "Makhluk.h"
 
 using namespace std;
 
@@ -11,7 +11,7 @@ class HimpMakhluk{
 	public:
 		HimpMakhluk();
 		~HimpMakhluk();
-		void AddMakhluk();
+		void AddMakhluk(Makhluk * A);
 		void SurvFight();
 		Makhluk * DeleteMakhluk(Makhluk * A);
 		bool IsFull();
