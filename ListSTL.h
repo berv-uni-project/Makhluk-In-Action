@@ -2,6 +2,8 @@
 #include <iostream>
 #include "makhluk.h"
 
+using namespace std;
+
 class ListSTL{
 	public:
 		ListSTL();
