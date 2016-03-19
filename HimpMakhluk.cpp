@@ -7,7 +7,7 @@ HimpMakhluk::HimpMakhluk() {
 }
 
 HimpMakhluk::~HimpMakhluk() {
-  
+  Mem.clear();
 }
 
 void HimpMakhluk::AddMakhluk(Makhluk *A) {
