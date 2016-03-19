@@ -1,13 +1,16 @@
+#ifndef HIMP_MAKHLUK_H
+#define HIMP_MAKHLUK_H
+
 #include <vector>
 #include <iostream>
 #include "makhluk.h"
 
 using namespace std;
 
-class ListSTL{
+class HimpMakhluk{
 	public:
-		ListSTL();
-		~ListSTL();
+		HimpMakhluk();
+		~HimpMakhluk();
 		void AddMakhluk();
 		void SurvFight();
 		Makhluk * DeleteMakhluk(Makhluk * A);
@@ -18,3 +21,5 @@ class ListSTL{
 		vector<Makhluk *> Mem;
 		const static int MaxMakhluk;
 };
+
+#endif
