@@ -35,6 +35,7 @@ class ListMakhluk {
 
 		Node * GetFirst();
 		int GetnMakhluk();
+		int GetMaxMakhluk();
 		void showlist();
 
 		Node* checkMoveMakhluk(int, int);

@@ -192,6 +192,12 @@ int ListMakhluk::GetnMakhluk(){
 	 */
 	return nMakhluk;
 }
+int ListMakhluk::GetMaxMakhluk(){
+	/*! \var int GetMaxMakhluk
+	 *  \brief mengembalikan nilai MaxMakhluk pada list
+	 */
+	 return MaxMakhluk;
+}
 
 void ListMakhluk::showlist(){
 	/*! \var void showlist()
