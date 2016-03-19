@@ -15,7 +15,11 @@ class Makhluk {
 		int getpowerlevel();
 		int getage();
 		double getdeltaT();
-		void showme();
+		void getme();
+		char whome();
+
+		int getX();
+		int getY();
 		
 	protected :
 		char bentuk;

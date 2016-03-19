@@ -16,7 +16,7 @@ Makhluk::Makhluk(){
 }
 
 Makhluk::Makhluk(const Makhluk& M){
-	/* ! \var Makhluk(const Makhluk& M)
+	/*! \var Makhluk(const Makhluk& M)
 		\brief Copy Constructor Makhluk Abstrak
 		\param M M merupakan Makhluk abstrak dimana semua atributnya akan di copy ke Makhluk ini
 	*/
@@ -29,14 +29,14 @@ Makhluk::Makhluk(const Makhluk& M){
 }
 
 Makhluk::~Makhluk(){
-	/* ! \var ~Makhluk()
+	/*! \var ~Makhluk()
 	\brief Destuctor Makhluk Abstrak
 	*/
 	cout<<"dtor Makhluk"<<endl;
 }
 
 Makhluk& Makhluk::operator= (const Makhluk& M){
-	/* ! \var Makhluk& operator= (Makhluk& M)
+	/*! \var Makhluk& operator= (Makhluk& M)
 	\brief Operator = Makhluk Abstrak
 	\param M M merupakan Makhluk abstrak dimana semua atributnya akan di copy ke Makhluk ini
 	*/
@@ -50,26 +50,40 @@ Makhluk& Makhluk::operator= (const Makhluk& M){
 }
 
 int Makhluk::getpowerlevel(){
-	/* ! \var int getpowerlevel()
+	/*! \var int getpowerlevel()
 	\brief Memberikan keluaran isi dari powerlevel
 	*/
 	return powerlevel;
 }
 
 int Makhluk::getage() {
-	/* ! \var int getage()
+	/*! \var int getage()
 	\brief Memberikan keluaran isi dari age
 	*/
 	return age;	
 }
 
 double Makhluk::getdeltaT() {
-	/* ! \var double getdeltaT()
+	/*! \var double getdeltaT()
 	\brief Memberikan keluaran isi dari deltaT
 	*/
 	return deltaT;
 }
 
-void Makhluk::showme() {
+void Makhluk::getme() {
 	cout << bentuk;	
+}
+
+int Makhluk::getX()
+{
+	return x;
+}
+
+int Makhluk::getY()
+{
+	return y;
+}
+
+char Makhluk::whome() {
+	return bentuk;
 }
