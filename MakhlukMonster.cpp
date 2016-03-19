@@ -10,10 +10,10 @@ MakhlukMonster::MakhlukMonster(){
 	\brief Constructor Kelas MakhlukMonster menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukMonster" <<endl;
-	bentuk = '%' ;
 	age = 60; // lambat mati
 	powerlevel = 100; //paling kuat
 	deltaT = 1.0; //lambat
+	type = 4;
 }
 
 MakhlukMonster::MakhlukMonster(int a,int b){
@@ -23,10 +23,10 @@ MakhlukMonster::MakhlukMonster(int a,int b){
 	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukMonster" <<endl;
-	bentuk = '%' ;
 	age = 60; // lambat mati
 	powerlevel = 100; //paling kuat
 	deltaT = 1.0; //lambat 
+	type = 4;
 	x = a;
 	y = b;
 }
@@ -40,6 +40,7 @@ MakhlukMonster::MakhlukMonster(const MakhlukMonster& M){
 	age = M.age ;
 	powerlevel = M.powerlevel ;
 	deltaT = M.deltaT ;
+	type = M.type;
 }
 
 MakhlukMonster::~MakhlukMonster(){
@@ -58,6 +59,7 @@ MakhlukMonster& MakhlukMonster::operator= (const MakhlukMonster& M ){
 	age = M.age;
 	powerlevel = M.powerlevel;
 	deltaT = M.deltaT;
+	type = M.type;
 	return *this;
 }
 
@@ -78,10 +80,8 @@ void MakhlukMonster::move(){
 	*/
 	cout <<"move MakhlukMonster" <<endl;
 	int r1,r2;
-	int x,y = 0;
 	srand(time(NULL));
 	r1= rand() % 3 -1  ;
-	srand(1);
 	r2= rand() % 3 -1 ;
 	x = x + r1;
 	y = y + r2;	

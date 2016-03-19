@@ -25,7 +25,6 @@ class ListMakhluk {
 
 		void AddMakhluk(Makhluk*);
 		void AddMakhluk(Node*);
-		//void DeleteMakhluk(Makhluk&);
 		Node* DeleteFirst();
 		Node* DeleteAfter(Node*);
 		Node* DeleteLast();
@@ -36,7 +35,6 @@ class ListMakhluk {
 
 		Node * GetFirst();
 		int GetnMakhluk();
-		void SetnMakhluk(int );
 		void showlist();
 
 		Node* checkMoveMakhluk(int, int);
@@ -49,5 +47,4 @@ class ListMakhluk {
 };
 
 #endif //LISTMAKHLUK_H
-
 

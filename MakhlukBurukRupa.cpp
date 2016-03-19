@@ -10,10 +10,10 @@ MakhlukBurukRupa::MakhlukBurukRupa(){
 	\brief Constructor Kelas MakhlukBurukRupa menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukBurukRupa" <<endl;
-	bentuk = '$';
 	age = 80; // lambat mati 
 	powerlevel = 80; //normal
 	deltaT = 0.7; //cukup lambat
+	type = 2;
 }
 
 MakhlukBurukRupa::MakhlukBurukRupa(int a,int b){
@@ -23,10 +23,10 @@ MakhlukBurukRupa::MakhlukBurukRupa(int a,int b){
 	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukBurukRupa" <<endl;
-	bentuk = '$';
 	age = 80; // lambat mati 
 	powerlevel = 80; //normal
 	deltaT = 0.7; //cukup lambat
+	type = 2;
 	x = a;
 	y = b;
 }
@@ -37,10 +37,10 @@ MakhlukBurukRupa::MakhlukBurukRupa(const MakhlukBurukRupa& M){
 	\param M Semua atribut MakhlukBurukRupa akan diisi dengan atribut M yang juga merupakan MakhlukBurukRupa
 	*/
 	cout <<"cctor MakhlukBurukRupa" <<endl;
-	bentuk = M.bentuk;
 	age = M.age ;
 	powerlevel = M.powerlevel ;
 	deltaT = M.deltaT ;
+	type = M.type;
 }
 
 MakhlukBurukRupa::~MakhlukBurukRupa(){
@@ -56,10 +56,10 @@ MakhlukBurukRupa& MakhlukBurukRupa::operator= (const MakhlukBurukRupa& M ){
 	\param M Semua atribut MakhlukBurukRupa akan diisi dengan atribut M yang juga MakhlukBurukRupa
 	*/
 	cout <<"operator =  MakhlukBurukRupa" <<endl;
-	bentuk = M.bentuk();
 	age = M.age;
 	powerlevel = M.powerlevel;
 	deltaT = M.deltaT;
+	type = M.type;
 	return *this;
 }
 
@@ -82,13 +82,11 @@ void MakhlukBurukRupa::move(){
 	*/
 	cout <<"move MakhlukBurukRupa" <<endl;
 	int r1,r2;
-	int x,y = 0;
 	srand(time(NULL));
 	r1= rand() % 3 -1  ;
-	srand(1);
 	r2= rand() % 3 -1 ;
 	x = x + r1;
-	y = y + r2;	
+	y = y + r2;
 }
 
 void MakhlukBurukRupa::dead(){

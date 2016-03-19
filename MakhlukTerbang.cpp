@@ -10,10 +10,10 @@ MakhlukTerbang::MakhlukTerbang(){
 	\brief Constructor Kelas MakhlukTerbang menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukTerbang" <<endl;
-	bentuk = '&' ;
 	age = 30; // cepat mati
 	powerlevel = 70; //agak lemah
 	deltaT = 0.3; //cepat
+	type = 5;
 }
 
 MakhlukTerbang::MakhlukTerbang(int a,int b){
@@ -23,12 +23,12 @@ MakhlukTerbang::MakhlukTerbang(int a,int b){
 	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukTerbang" <<endl;
-	bentuk = '&' ;
 	age = 30; // cepat mati
 	powerlevel = 70; //agak lemah
 	deltaT = 0.3; //cepat 
 	x = a;
 	y = b;
+	type = 5;
 }
 
 MakhlukTerbang::MakhlukTerbang(const MakhlukTerbang& M){
@@ -40,6 +40,7 @@ MakhlukTerbang::MakhlukTerbang(const MakhlukTerbang& M){
 	age = M.age ;
 	powerlevel = M.powerlevel ;
 	deltaT = M.deltaT ;
+	type = M.type;
 }
 
 MakhlukTerbang::~MakhlukTerbang(){
@@ -58,6 +59,7 @@ MakhlukTerbang& MakhlukTerbang::operator= (const MakhlukTerbang& M ){
 	age = M.age;
 	powerlevel = M.powerlevel;
 	deltaT = M.deltaT;
+	type = M.type;
 	return *this;
 }
 
@@ -78,11 +80,9 @@ void MakhlukTerbang::move(){
 	*/
 	cout <<"move MakhlukTerbang" <<endl;
 	int r1,r2;
-	int x,y = 0;
 	srand(time(NULL));
-	r1= rand() % 3 -1  ;
-	srand(1);
-	r2= rand() % 3 -1 ;
+	r1= rand() % 3 -1;
+	r2= rand() % 3 -1;
 	x = x + r1;
 	y = y + r2;	
 }

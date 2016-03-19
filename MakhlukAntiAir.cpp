@@ -11,10 +11,10 @@ MakhlukAntiAir::MakhlukAntiAir(){
 	\brief Constructor Kelas MakhlukAntiAir menginisialisasi atribut
 	*/
 	cout <<"ctor MakhlukAntiAir" <<endl;
-	bentuk = '*';
 	age = 90; //lambat mati
 	powerlevel = 60; //cukup lemah
 	deltaT = 0.8;  //cukup lambat
+	type = 1;
 }
 
 MakhlukAntiAir::MakhlukAntiAir(int a,int b){
@@ -24,10 +24,10 @@ MakhlukAntiAir::MakhlukAntiAir(int a,int b){
 	\param b input posisi untuk y
 	*/
 	cout <<"ctor MakhlukAntiAir" <<endl;
-	bentuk = '*';
 	age = 90; //lambat mati
 	powerlevel = 60; //cukup lemah
 	deltaT = 0.8;  //cukup lambat
+	type = 1;
 	x = a;
 	y = b;
 }
@@ -38,10 +38,10 @@ MakhlukAntiAir::MakhlukAntiAir(const MakhlukAntiAir& M){
 	\param M Semua atribut MakhlukAntiAir akan diisi dengan atribut M yang juga merupakan MakhlukAntiAir
 	*/
 	cout <<"cctor MakhlukAntiAir" <<endl;
-	bentuk = M.bentuk;
 	age = M.age ;
 	powerlevel = M.powerlevel ;
 	deltaT = M.deltaT ;
+	type = M.type;
 }
 
 MakhlukAntiAir::~MakhlukAntiAir(){
@@ -57,10 +57,10 @@ MakhlukAntiAir& MakhlukAntiAir::operator= (const MakhlukAntiAir& M ){
 	\param M Semua atribut MakhlukAntiAir akan diisi dengan atribut M yang juga MakhlukAntiAir
 	*/
 	cout <<"operator =  MakhlukAntiAir" <<endl;
-	bentuk = M.bentuk;
 	age = M.age;
 	powerlevel = M.powerlevel;
 	deltaT = M.deltaT;
+	type = M.type;
 	return *this;
 }
 
@@ -81,10 +81,8 @@ void MakhlukAntiAir::move(){
 	*/
 	cout <<"move MakhlukAntiAir" <<endl;
 	int r1,r2;
-	int x,y = 0;
 	srand(time(NULL));
 	r1= rand() % 3 -1  ;
-	srand(1);
 	r2= rand() % 3 -1 ;
 	x = x + r1;
 	y = y + r2;		
