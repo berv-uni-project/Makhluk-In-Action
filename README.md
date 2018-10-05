@@ -1,4 +1,7 @@
 # Makhluk In Action
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6872f42eb4234fbb9ae0bcd6141428d9)](https://app.codacy.com/app/berviantoleo/Makhluk-In-Action?utm_source=github.com&utm_medium=referral&utm_content=berv-uni-project/Makhluk-In-Action&utm_campaign=Badge_Grade_Settings)
+
 For learning and study purpose.
 
 ## What is this?
