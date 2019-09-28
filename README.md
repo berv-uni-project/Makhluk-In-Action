@@ -9,11 +9,11 @@ This repository for learning Object Oriented Programming. In this repository hav
 
 This repository have many version, to direct that version can click link below :
 
-* [CPP - STL version](source/c++/stl-version), this version is using library in cpp exactly Vector for the data structured and that management.
-* [CPP - Non STL version](source/c++/default-version), this version is using make own data structured and management.
-* [CPP - Thread version](source/c++/thread-version), this version is using STL version but use multi-Thread in this app.
-* [Java version](source/java), this version is translate from STL version cpp to Java.
-* [Mini Game](final-GUI), this version is complete mini game with GUI and using swing Java. We have many change in this version from old version include data structured and program structure.
+* [CPP - STL version](src/c++/stl-version), this version is using library in cpp exactly Vector for the data structured and that management.
+* [CPP - Non STL version](src/c++/default-version), this version is using make own data structured and management.
+* [CPP - Thread version](src/c++/thread-version), this version is using STL version but use multi-Thread in this app.
+* [Java version](src/java), this version is translate from STL version cpp to Java.
+* [Mini Game](src/final-GUI), this version is complete mini game with GUI and using swing Java. We have many change in this version from old version include data structured and program structure.
  
 ## About Us
 Creator of this application :
@@ -26,4 +26,4 @@ Creator of this application :
 ## Tell If Have Problem
 If You have problem to use this application, tell Us! Please tell Us if You use part of or full source from this repository.
 
-# Thank You for Supporting Us 
+## Thank You for Supporting Us 
