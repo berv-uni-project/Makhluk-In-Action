@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import makhlukinaction.*;
+import makhlukinaction.model.*;
 import static org.junit.Assert.*;
 
 /**
@@ -124,7 +125,7 @@ public class HimpMakhlukTest {
         Makhluk M = new MakhlukAntiAir();
         instance.addMakhluk(M);
         // mengetes apakah benar yang di return adalah makhluk anti air dengan type =1
-        assertEquals(1, instance.getMakhlukin(0).type);
+        assertEquals(1, instance.getMakhlukin(0).getType());
         System.out.println("Sucess");
         // TODO review the generated test code and remove the default call to fail.
     }

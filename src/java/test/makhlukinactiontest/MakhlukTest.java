@@ -11,7 +11,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import makhlukinaction.*;
+import makhlukinaction.model.*;
 import static org.junit.Assert.*;
 
 /**
@@ -51,11 +51,11 @@ public class MakhlukTest {
         Makhluk M4 = new MakhlukMonster();
         Makhluk M5 = new MakhlukTerbang();
         // hanya untuk junit
-        M.deltaT = 0;
-        M2.deltaT = 0;
-        M3.deltaT = 0;
-        M4.deltaT = 0;
-        M5.deltaT = 0;
+        //M.deltaT = 0;
+        //M2.deltaT = 0;
+        //M3.deltaT = 0;
+        //M4.deltaT = 0;
+        //M5.deltaT = 0;
         M.move();
         M2.move();
         M3.move();
