@@ -8,51 +8,56 @@
 
 using namespace std;
 
-MakhlukMaling::MakhlukMaling(){
+MakhlukMaling::MakhlukMaling()
+{
 	/*! \var MakhlukMaling()
 	*\brief Constructor Kelas MakhlukMaling menginisialisasi atribut
 	*/
-	age = 40; //normal
+	age = 40;				 //normal
 	powerlevel = 75; // cukup lemah
-	deltaT = 5; // cukup cepat 
+	deltaT = 5;			 // cukup cepat
 	type = 3;
 	agenow = 0;
 }
 
-MakhlukMaling::MakhlukMaling(int a,int b){
+MakhlukMaling::MakhlukMaling(int a, int b)
+{
 	/*! \var MakhlukMaling(int a,int b)
 	*\brief Constructor Parameter Kelas MakhlukMaling
 	*\param a input posisi untuk x 
 	*\param b input posisi untuk y
 	*/
-	age = 40; //normal
+	age = 40;				 //normal
 	powerlevel = 75; // cukup lemah
-	deltaT = 5; // cukup cepat 
+	deltaT = 5;			 // cukup cepat
 	type = 3;
 	x = a;
 	y = b;
 	agenow = 0;
 }
 
-MakhlukMaling::MakhlukMaling(const MakhlukMaling& M){
+MakhlukMaling::MakhlukMaling(const MakhlukMaling &M)
+{
 	/*! \var MakhlukMaling(const MakhlukMaling& M)
 	*\brief Copy constructor Kelas MakhlukMaling
 	*\param M Semua atribut MakhlukMaling akan diisi dengan atribut M yang juga merupakan MakhlukMaling
 	*/
-	age = M.age ;
-	powerlevel = M.powerlevel ;
-	deltaT = M.deltaT ;
+	age = M.age;
+	powerlevel = M.powerlevel;
+	deltaT = M.deltaT;
 	type = M.type;
 	agenow = M.agenow;
 }
 
-MakhlukMaling::~MakhlukMaling(){
+MakhlukMaling::~MakhlukMaling()
+{
 	/*! \var ~MakhlukMaling()
 	*\brief Destructor Kelas MakhlukMaling
 	*/
 }
 
-MakhlukMaling& MakhlukMaling::operator= (const MakhlukMaling& M ){
+MakhlukMaling &MakhlukMaling::operator=(const MakhlukMaling &M)
+{
 	/*! \var MakhlukMaling& operator=(const MakhlukMaling& M)
 	*\brief Operator= Kelas MakhlukMaling
 	*\param M Semua atribut MakhlukMaling akan diisi dengan atribut M yang juga MakhlukMaling
@@ -65,7 +70,8 @@ MakhlukMaling& MakhlukMaling::operator= (const MakhlukMaling& M ){
 	return *this;
 }
 
-void MakhlukMaling::move(){
+void MakhlukMaling::move()
+{
 	/*! \var void move()
 	*\brief Melakukan Perpindahan pada MakhlukMaling dapat semua arah namun pelan delta T besar dan dapat mantul
 	*\param x Panjang maksimum dari matriks
@@ -86,7 +92,8 @@ void MakhlukMaling::move(){
 		deltaT--;
 }
 
-void MakhlukMaling::dead(){
+void MakhlukMaling::dead()
+{
 	/*! \var void dead()
 	*\brief Prosedur berisi MakhlukMaling mati
 	*/

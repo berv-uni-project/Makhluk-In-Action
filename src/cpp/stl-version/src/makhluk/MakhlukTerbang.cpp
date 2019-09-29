@@ -8,51 +8,56 @@
 
 using namespace std;
 
-MakhlukTerbang::MakhlukTerbang(){
+MakhlukTerbang::MakhlukTerbang()
+{
 	/*! \var MakhlukTerbang()
 	*\brief Constructor Kelas MakhlukTerbang menginisialisasi atribut
 	*/
-	age = 30; // cepat mati
+	age = 30;				 // cepat mati
 	powerlevel = 70; //agak lemah
-	deltaT = 3; //cepat
+	deltaT = 3;			 //cepat
 	type = 5;
 	agenow = 0;
 }
 
-MakhlukTerbang::MakhlukTerbang(int a,int b){
+MakhlukTerbang::MakhlukTerbang(int a, int b)
+{
 	/*! \var MakhlukTerbang(int a,int b)
 	*\brief Constructor Parameter Kelas MakhlukTerbang
 	*\param a input posisi untuk x 
 	*\param b input posisi untuk y
 	*/
-	age = 30; // cepat mati
+	age = 30;				 // cepat mati
 	powerlevel = 70; //agak lemah
-	deltaT = 3; //cepat
+	deltaT = 3;			 //cepat
 	x = a;
 	y = b;
 	type = 5;
 	agenow = 0;
 }
 
-MakhlukTerbang::MakhlukTerbang(const MakhlukTerbang& M){
+MakhlukTerbang::MakhlukTerbang(const MakhlukTerbang &M)
+{
 	/*! \var MakhlukTerbang(const MakhlukTerbang& M)
 	*\brief Copy constructor Kelas MakhlukTerbang
 	*\param M Semua atribut MakhlukTerbang akan diisi dengan atribut M yang juga merupakan MakhlukTerbang
 	*/
-	age = M.age ;
-	powerlevel = M.powerlevel ;
-	deltaT = M.deltaT ;
+	age = M.age;
+	powerlevel = M.powerlevel;
+	deltaT = M.deltaT;
 	type = M.type;
 	agenow = M.agenow;
 }
 
-MakhlukTerbang::~MakhlukTerbang(){
+MakhlukTerbang::~MakhlukTerbang()
+{
 	/*! \var ~MakhlukTerbang()
 	*\brief Destructor Kelas MakhlukTerbang
 	*/
 }
 
-MakhlukTerbang& MakhlukTerbang::operator= (const MakhlukTerbang& M ){
+MakhlukTerbang &MakhlukTerbang::operator=(const MakhlukTerbang &M)
+{
 	/*! \var MakhlukTerbang& operator= (const MakhlukTerbang& M)
 	*\brief operator = dari kelas MakhlukTerbang
 	*\param M Semua atribut MakhlukTerbang akan diisi dengan atribut M yang juga MakhlukTerbang
@@ -65,7 +70,8 @@ MakhlukTerbang& MakhlukTerbang::operator= (const MakhlukTerbang& M ){
 	return *this;
 }
 
-void MakhlukTerbang::move(){
+void MakhlukTerbang::move()
+{
 	/*! \var void move()
 	*\brief Melakukan Perpindahan pada MakhlukTerbang tidak dibatasi namun jika keluar layar mati 
 	*\param x Panjang maksimum dari matriks
@@ -86,7 +92,8 @@ void MakhlukTerbang::move(){
 		deltaT--;
 }
 
-void MakhlukTerbang::dead(){
+void MakhlukTerbang::dead()
+{
 	/*! \var void dead()
 	*\brief Prosedur berisi MakhlukTerbang mati
 	*/

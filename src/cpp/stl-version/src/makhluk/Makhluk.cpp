@@ -6,48 +6,55 @@ using namespace std;
 //PIC Unit Test : Joshua Salimin 13514001
 //Dibuat oleh : Joshua Salimin, Bervianto Leo
 
-int Makhluk::getpowerlevel(){
+int Makhluk::getpowerlevel()
+{
 	/*! \var int getpowerlevel()
 	\brief Memberikan keluaran isi dari powerlevel
 	*/
 	return powerlevel;
 }
 
-int Makhluk::getage() {
+int Makhluk::getage()
+{
 	/*! \var int getage()
 	\brief Memberikan keluaran isi dari age yang dapat ditempuh
 	*/
-	return age;	
+	return age;
 }
 
-int Makhluk::getagenow() {
+int Makhluk::getagenow()
+{
 	/*! \var int getage()
 	\brief Memberikan keluaran umur sekarang
 	*/
 	return agenow;
 }
 
-double Makhluk::getdeltaT() {
+double Makhluk::getdeltaT()
+{
 	/*! \var double getdeltaT()
 	\brief Memberikan keluaran isi dari deltaT
 	*/
 	return deltaT;
 }
 
-int Makhluk::gettype() {
+int Makhluk::gettype()
+{
 	/*! \var void getme()
 	\brief mendapatkan bentuk dari makhluk
 	*/
-	return type;	
+	return type;
 }
 
-int Makhluk::getX(){
+int Makhluk::getX()
+{
 	/*! \var int getX()
 	\brief mendapatkan posisi X dari makhluk
 	*/
 	return x;
 }
-int Makhluk::getY(){
+int Makhluk::getY()
+{
 	/*! \var int getY()
 	\brief mendapatkan posisi Y dari makhluk
 	*/
