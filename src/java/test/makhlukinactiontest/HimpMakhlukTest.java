@@ -1,15 +1,17 @@
+package makhlukinactiontest;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import makhlukinaction.*;
 import static org.junit.Assert.*;
 
 /**
@@ -17,22 +19,22 @@ import static org.junit.Assert.*;
  * @author Joshua
  */
 public class HimpMakhlukTest {
-    
+
     public HimpMakhlukTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -45,15 +47,15 @@ public class HimpMakhlukTest {
         System.out.println("AddMakhluk");
         Makhluk M = new MakhlukAntiAir();
         HimpMakhluk instance = new HimpMakhluk();
-        instance.AddMakhluk(M);
+        instance.addMakhluk(M);
         // TODO review the generated test code and remove the default call to fail.
-        System.out.println("Tipe Makhluk Test: "+ instance.GetMakhlukin(0).gettype());
-        assertEquals(instance.GetMakhlukin(0), M);
-        assertEquals(1,instance.GetMakhlukin(0).gettype());
+        System.out.println("Tipe Makhluk Test: " + instance.getMakhlukin(0).getType());
+        assertEquals(instance.getMakhlukin(0), M);
+        assertEquals(1, instance.getMakhlukin(0).getType());
         Makhluk M2 = new MakhlukMaling();
-        instance.AddMakhluk(M2);
-        System.out.println("Tipe Makhluk Test2: "+ instance.GetMakhlukin(1).gettype());
-        assertEquals(instance.GetMakhlukin(1), M2);
+        instance.addMakhluk(M2);
+        System.out.println("Tipe Makhluk Test2: " + instance.getMakhlukin(1).getType());
+        assertEquals(instance.getMakhlukin(1), M2);
         System.out.println("Sucess");
     }
 
@@ -66,12 +68,12 @@ public class HimpMakhlukTest {
         HimpMakhluk instance = new HimpMakhluk();
         Makhluk M = new MakhlukAntiAir();
         Makhluk M2 = new MakhlukMaling();
-        instance.AddMakhluk(M);
-        instance.AddMakhluk(M2);
-        Makhluk Mhasil = instance.SurvFight();
-        System.out.println("Isi ArrayList: "+ instance.GetMakhlukin(0).gettype());
-        System.out.println("Tipe Makhluk SurvFight: "+ Mhasil.gettype());
-        assertEquals(Mhasil.gettype(), M2.gettype());
+        instance.addMakhluk(M);
+        instance.addMakhluk(M2);
+        Makhluk Mhasil = instance.survFight();
+        System.out.println("Isi ArrayList: " + instance.getMakhlukin(0).getType());
+        System.out.println("Tipe Makhluk SurvFight: " + Mhasil.getType());
+        assertEquals(Mhasil.getType(), M2.getType());
         System.out.println("Sucess");
         // TODO review the generated test code and remove the default call to fail.
     }
@@ -85,11 +87,11 @@ public class HimpMakhlukTest {
         HimpMakhluk instance = new HimpMakhluk();
         Makhluk M = new MakhlukAntiAir();
         Makhluk M2 = new MakhlukMaling();
-        instance.AddMakhluk(M);
-        instance.AddMakhluk(M2);
-        instance.DeleteMakhluk(M);
-        System.out.println(instance.GetnMakhluk());
-        assertEquals(1,instance.GetnMakhluk());
+        instance.addMakhluk(M);
+        instance.addMakhluk(M2);
+        instance.deleteMakhluk(M);
+        System.out.println(instance.getNMakhluk());
+        assertEquals(1, instance.getNMakhluk());
         System.out.println("Sucess");
         // TODO review the generated test code and remove the default call to fail.
     }
@@ -102,12 +104,12 @@ public class HimpMakhlukTest {
         System.out.println("isFull");
         HimpMakhluk instance = new HimpMakhluk();
         Makhluk M = new MakhlukAntiAir();
-        instance.AddMakhluk(M);
+        instance.addMakhluk(M);
         boolean expResult = true;
         boolean result = instance.isFull();
         assertEquals(expResult, result);
         System.out.println("Sucess");
-        //maksimal penuh adalah 1 
+        // maksimal penuh adalah 1
         // TODO review the generated test code and remove the default call to fail.
     }
 
@@ -120,9 +122,9 @@ public class HimpMakhlukTest {
         int i = 1;
         HimpMakhluk instance = new HimpMakhluk();
         Makhluk M = new MakhlukAntiAir();
-        instance.AddMakhluk(M);
-        //mengetes apakah benar yang di return adalah makhluk anti air dengan type =1 
-        assertEquals(1, instance.GetMakhlukin(0).type);
+        instance.addMakhluk(M);
+        // mengetes apakah benar yang di return adalah makhluk anti air dengan type =1
+        assertEquals(1, instance.getMakhlukin(0).type);
         System.out.println("Sucess");
         // TODO review the generated test code and remove the default call to fail.
     }
@@ -136,10 +138,10 @@ public class HimpMakhlukTest {
         HimpMakhluk instance = new HimpMakhluk();
         Makhluk M = new MakhlukAntiAir();
         Makhluk M2 = new MakhlukMaling();
-        instance.AddMakhluk(M);
-        instance.AddMakhluk(M2);
+        instance.addMakhluk(M);
+        instance.addMakhluk(M2);
         int expResult = 2;
-        int result = instance.GetnMakhluk();
+        int result = instance.getNMakhluk();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
     }
@@ -152,8 +154,8 @@ public class HimpMakhlukTest {
         System.out.println("GetMaxMakhluk");
         HimpMakhluk instance = new HimpMakhluk();
         int expResult = 0;
-        int result = instance.GetMaxMakhluk();
-        //1 merupakan nilai maksimum pada arraylist
+        int result = instance.getMaxMakhluk();
+        // 1 merupakan nilai maksimum pada arraylist
         assertEquals(1, result);
         // TODO review the generated test code and remove the default call to fail.
     }
@@ -167,8 +169,8 @@ public class HimpMakhlukTest {
         HimpMakhluk instance = new HimpMakhluk();
         Makhluk M = new MakhlukAntiAir();
         Makhluk M2 = new MakhlukMaling();
-        instance.AddMakhluk(M);
-        instance.AddMakhluk(M2);
+        instance.addMakhluk(M);
+        instance.addMakhluk(M2);
         boolean expResult = true;
         boolean result = instance.isOver();
         assertEquals(expResult, result);
@@ -194,15 +196,15 @@ public class HimpMakhlukTest {
     @Test
     public void testCheckMoveMakhluk() {
         System.out.println("checkMoveMakhluk");
-        //untuk di test bahwa makhluk telah berpindah
+        // untuk di test bahwa makhluk telah berpindah
         int x = 1;
         int y = 1;
         HimpMakhluk instance = new HimpMakhluk();
         Makhluk M = new MakhlukAntiAir();
-        instance.AddMakhluk(M);
+        instance.addMakhluk(M);
         Makhluk result = instance.checkMoveMakhluk(x, y);
         assertEquals(M, result);
         // TODO review the generated test code and remove the default call to fail.
     }
-    
+
 }

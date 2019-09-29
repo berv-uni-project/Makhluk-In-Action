@@ -9,7 +9,7 @@
 
 rootProject.name = 'Makhluk-In-Action'
 
-include 'main:java'
-include ':main:cpp:stl-version'
+include ':src:java'
+include ':src:cpp:stl-version'
 
 
