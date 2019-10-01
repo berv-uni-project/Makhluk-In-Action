@@ -1,5 +1,11 @@
 os: windows
 language: cpp
 
+install:
+  - choco install jdk8
+  - SET PATH=%PATH%:"c://Program Files/Java/jdk1.8.0_191/bin"
+  - SET JAVA_HOME="c://Program Files/Java/jdk1.8.0_191/bin"
+  - java -version
+
 script:
   - ./gradlew :cpp:build
