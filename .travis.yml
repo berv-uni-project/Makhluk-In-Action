@@ -1,9 +1,5 @@
-language: java
-install: true
-
-os: linux
-dist: trusty
-jdk: oraclejdk8
+os: windows
+language: cpp
 
 script:
-  - ./gradlew build
+  - ./gradlew :cpp:build
