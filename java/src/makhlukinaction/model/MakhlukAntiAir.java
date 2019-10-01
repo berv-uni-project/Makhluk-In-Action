@@ -41,7 +41,8 @@ public class MakhlukAntiAir extends Makhluk {
 	{
 		if (deltaT == 0) {
 			Random rand = new Random();
-			int r1 = 0, r2 = 0;
+			int r1 = 0;
+			int r2 = 0;
 			while (r1 == 0 || r2 == 0) {
 				r1 = rand.nextInt(3) - 1; // nextInt(n) --> random dengan maksimal n,
 				r2 = rand.nextInt(3) - 1; // -1 --> nilai minimal
@@ -53,5 +54,4 @@ public class MakhlukAntiAir extends Makhluk {
 		} else
 			deltaT--;
 	}
-
-};
+}
