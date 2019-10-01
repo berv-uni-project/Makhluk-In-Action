@@ -3,9 +3,9 @@ language: cpp
 
 install:
   - choco install jdk8 -params 'installdir=c:\\java8'
-  - export PATH=$PATH:";C:\java8"
+  - export PATH=$PATH:";C:\java8\bin"
   - export JAVA_HOME="C:\java8"
   - java -version
 
 script:
-  - ./gradlew :cpp:build
+  - ./gradlew build
