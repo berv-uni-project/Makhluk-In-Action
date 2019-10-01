@@ -40,7 +40,6 @@ public class MakhlukTest {
          // another class tear down
     }
 
-
     /**
      * Test of getpowerlevel method, of class Makhluk.
      */
