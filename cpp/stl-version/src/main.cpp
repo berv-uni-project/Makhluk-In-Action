@@ -1,19 +1,17 @@
-#include "ControlCommand.h"
+#include "controlcommand/ControlCommand.h"
 #include "windows.h"
 #include <math.h>
 #include <iostream>
 
 using namespace std;
 
-//Tested by : Joshua Salimin 13514001
-//karena main utama kami memakai langsung dari control command
-//maka dari itu driver sudah otomatis ditest dan berjalan
+//PIC Unit Test : Jeremia Jason
+//Dibuat oleh : Jeremia Jason
 
 int main()
 {
 	int u;
 	int max;
-	view V;
 	system("CLS");
 	bool stop = false;
 	while (!stop)
@@ -40,7 +38,9 @@ int main()
 				stop = true;
 			}
 			else
+			{
 				throw(C);
+			}
 		}
 
 		catch (char C)
@@ -50,9 +50,6 @@ int main()
 	}
 	//Menciptakan objek Control
 	Control P(u, u, max);
-	P.spawn();
-	P.spawn();
-	P.updateWorld(V);
-	cout << "Unit Test Success" << endl;
+	P.start();
 	return 0;
 }

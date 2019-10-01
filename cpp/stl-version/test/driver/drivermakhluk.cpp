@@ -1,9 +1,9 @@
-#include "MakhlukAntiAir.h"
-#include "MakhlukBurukRupa.h"
-#include "MakhlukMaling.h"
-#include "MakhlukMonster.h"
-#include "MakhlukTerbang.h"
-#include "Makhluk.h"
+#include "../../src/makhluk/MakhlukAntiAir.h"
+#include "../../src/makhluk/MakhlukBurukRupa.h"
+#include "../../src/makhluk/MakhlukMaling.h"
+#include "../../src/makhluk/MakhlukMonster.h"
+#include "../../src/makhluk/MakhlukTerbang.h"
+#include "../../src/makhluk/Makhluk.h"
 #include <iostream>
 
 using namespace std;

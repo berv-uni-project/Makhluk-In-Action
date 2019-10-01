@@ -1,6 +1,7 @@
-#include "View.h"
+#include "../../src/view/View.h"
 #include <iostream>
 
+using namespace std;
 //Tested by : Joshua Salimin 13514001
 int main()
 {

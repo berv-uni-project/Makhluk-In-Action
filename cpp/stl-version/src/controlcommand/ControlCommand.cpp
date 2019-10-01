@@ -1,7 +1,7 @@
 #include "ControlCommand.h"
-#include <iostream>
 
 using namespace std;
+#pragma comment(lib, "User32.lib")
 
 // PIC untuk UNIT TEST : Jeremia Jason
 // Pembuat Kelas : Jeremia Jason(Sebagian besar), Azzahid(Fstream to file external), Joshua Salimin (Bagian input pengguna dari keyboard)
@@ -17,11 +17,15 @@ Control::Control() : MaxTotalMakhluk(30)
 
 	Cell = new HimpMakhluk *[panjang];
 	for (int i = 0; i < panjang; i++)
+	{
 		Cell[i] = new HimpMakhluk[lebar];
+	}
 
 	Creature = new Makhluk *[MaxTotalMakhluk];
 	for (int i = 0; i < MaxTotalMakhluk; i++)
-		Creature[i] = NULL;
+	{
+		Creature[i] = Nil;
+	}
 }
 
 Control::Control(int _panjang, int _lebar) : MaxTotalMakhluk(_panjang * _lebar / 2)
@@ -34,11 +38,15 @@ Control::Control(int _panjang, int _lebar) : MaxTotalMakhluk(_panjang * _lebar /
 	panjang = _panjang;
 	Cell = new HimpMakhluk *[panjang];
 	for (int i = 0; i < panjang; i++)
+	{
 		Cell[i] = new HimpMakhluk[lebar];
+	}
 
 	Creature = new Makhluk *[MaxTotalMakhluk];
 	for (int i = 0; i < MaxTotalMakhluk; i++)
-		Creature[i] = NULL;
+	{
+		Creature[i] = Nil;
+	}
 }
 
 Control::Control(int _panjang, int _lebar, int max) : MaxTotalMakhluk(max)
@@ -52,11 +60,15 @@ Control::Control(int _panjang, int _lebar, int max) : MaxTotalMakhluk(max)
 	panjang = _panjang;
 	Cell = new HimpMakhluk *[panjang];
 	for (int i = 0; i < panjang; i++)
+	{
 		Cell[i] = new HimpMakhluk[lebar];
+	}
 
 	Creature = new Makhluk *[MaxTotalMakhluk];
 	for (int i = 0; i < MaxTotalMakhluk; i++)
-		Creature[i] = NULL;
+	{
+		Creature[i] = Nil;
+	}
 }
 
 Control::~Control()
@@ -64,7 +76,9 @@ Control::~Control()
 	*\brief Dtor kelas Control
 	*/
 	for (int i = 0; i < panjang; i++)
+	{
 		delete[] Cell[i];
+	}
 	delete[] Cell;
 }
 
@@ -175,8 +189,10 @@ void Control::updateWorld(View V)
 			unsigned int n = Cell[i][j].GetnMakhluk();
 			unsigned int max = Cell[i][j].GetMaxMakhluk();
 			for (unsigned int i = n; i < max; i++)
-				std::cout << " ";
-			std::cout << "|";
+			{
+				cout << " ";
+			}
+			cout << "|";
 		}
 		cout << endl;
 	}
@@ -219,14 +235,18 @@ void Control::MoveMakhluk(int i, int j)
 						deleteMakhluk(N);
 					}
 					else
+					{
 						Cell[x][y].AddMakhluk(M);
+					}
 				}
 				else
 				{
 					deleteMakhluk(M);
 					Makhluk *M = Cell[i][j].checkMoveMakhluk(i, j);
 					if (M == Nil)
+					{
 						exit = true;
+					}
 				}
 			}
 		} while ((M != Nil) && (exit == false));
@@ -256,7 +276,7 @@ void Control::deleteMakhluk(Makhluk *N)
 	{
 		if (N == Creature[i])
 		{
-			Creature[i] = NULL;
+			Creature[i] = Nil;
 			nTotalMakhluk--;
 		}
 	}
@@ -268,11 +288,15 @@ void Control::AutoSpawn()
 	*\brief Untuk melakukan autospawn dan dimasukkan ke dalam list creature
 	*/
 	int i = 0;
-	while ((Creature[i] != NULL) && (i < MaxTotalMakhluk))
+	while ((Creature[i] != Nil) && (i < MaxTotalMakhluk))
+	{
 		i++;
+	}
 
-	if (Creature[i] == NULL)
+	if (Creature[i] == Nil)
+	{
 		Creature[i] = spawn();
+	}
 }
 
 void Control::PrintToFile(View V)
@@ -297,7 +321,9 @@ void Control::PrintToFile(View V)
 			unsigned int n = Cell[i][j].GetnMakhluk();
 			unsigned int max = Cell[i][j].GetMaxMakhluk();
 			for (unsigned int i = n; i < max; i++)
+			{
 				SS << " ";
+			}
 			SS << "|";
 		}
 		SS << endl;
@@ -312,7 +338,7 @@ void Control::start()
 	View V;
 	int delT = 0;
 
-	srand(time(NULL));
+	srand(time(Nil));
 	int t = rand() % (MaxTotalMakhluk / 4) + (MaxTotalMakhluk / 6);
 	for (int i = 0; i < t; i++)
 	{
@@ -368,7 +394,9 @@ void Control::start()
 			while (z < 10)
 			{
 				if (delT == 10000)
+				{
 					delT = 0;
+				}
 				delT++;
 				Step(delT);
 				++z;
@@ -383,7 +411,9 @@ void Control::start()
 		updateWorld(V);
 		cout << endl;
 		if (delT == 10000)
+		{
 			delT = 0;
+		}
 		delT++;
 		Sleep(100);
 		Step(delT);
@@ -407,7 +437,7 @@ void Control::Step(int delT)
 
 	for (int i = 0; i < MaxTotalMakhluk; i++)
 	{
-		if (Creature[i] != NULL)
+		if (Creature[i] != Nil)
 		{
 			Creature[i]->move();
 		}
@@ -419,14 +449,18 @@ void Control::Step(int delT)
 			int x1 = rand() % 20;
 			int x2 = rand() % 5;
 			if (x1 < x2)
+			{
 				AutoSpawn();
+			}
 		}
 		else
 		{
 			int x1 = rand() % 5;
 			int x2 = rand() % 10 + 2;
 			if (x1 >= x2)
+			{
 				AutoSpawn();
+			}
 		}
 	}
 }

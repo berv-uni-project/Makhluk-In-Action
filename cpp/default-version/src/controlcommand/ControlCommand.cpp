@@ -6,6 +6,8 @@ Dibuat oleh : Jeremia Jason (sebagian besar), Azzahid (fstream untuk file extern
 
 using namespace std;
 
+#pragma comment(lib, "User32.lib")
+
 #define Nil NULL
 
 Control::Control() : MaxTotalMakhluk(30)

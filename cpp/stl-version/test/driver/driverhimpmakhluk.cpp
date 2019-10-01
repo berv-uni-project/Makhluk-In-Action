@@ -2,12 +2,12 @@
  * Kontributor : BLP (13514047)
  * */
 
-#include "HimpMakhluk.h"
-#include "../makhluk/MakhlukAntiAir.h"
-#include "../makhluk/MakhlukBurukRupa.h"
-#include "../makhluk/MakhlukMaling.h"
-#include "../makhluk/MakhlukMonster.h"
-#include "../makhluk/MakhlukTerbang.h"
+#include "../../src/listmakhluk/HimpMakhluk.h"
+#include "../../src/makhluk/MakhlukAntiAir.h"
+#include "../../src/makhluk/MakhlukBurukRupa.h"
+#include "../../src/makhluk/MakhlukMaling.h"
+#include "../../src/makhluk/MakhlukMonster.h"
+#include "../../src/makhluk/MakhlukTerbang.h"
 
 //Tested by : Joshua Salimin 13514001
 int main()
