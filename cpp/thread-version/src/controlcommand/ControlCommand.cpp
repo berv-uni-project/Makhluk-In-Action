@@ -3,6 +3,8 @@
 
 using namespace std;
 
+#pragma comment(lib, "User32.lib")
+
 //PIC Unit Test : Jeremia Jason
 //Dibuat oleh : Jeremia Jason(Sebagian Besar), Joshua Salimin(Bagian input keyboard dari pengguna, Azzahid(Bagian fstream ke file eksternal)
 
