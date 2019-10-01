@@ -20,11 +20,10 @@ public class MakhlukMaling extends Makhluk {
         super.setPowerLevel(DEFAULT_POWERLEVEL);
         super.setType(DEFAULT_TYPE);
         super.setAlive(true);
-        int random1, random2;
         final int m = 560;
         final int m2 = 510;
-        random1 = (int) (Math.random() * m + randomize1);
-        random2 = (int) (Math.random() * m2 + randomize2);
+        int random1 = (int) (Math.random() * m + randomize1);
+        int random2 = (int) (Math.random() * m2 + randomize2);
         super.setX(random1);
         super.setY(random2);
     }
@@ -54,4 +53,4 @@ public class MakhlukMaling extends Makhluk {
         g.setFont(new Font("Courier New", Font.BOLD, fontsize));
         g.drawString("$", super.getX(), super.getY());
     }
-};
+}
