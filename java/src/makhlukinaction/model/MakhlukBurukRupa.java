@@ -39,13 +39,11 @@ public class MakhlukBurukRupa extends Makhluk {
 	public void move() {
 		if (deltaT == 0) {
 			Random rand = new Random();
-			int r1;
-			r1 = rand.nextInt(3) - 1;
+			int r1 = rand.nextInt(3) - 1;
 			y = y + r1;
 			ageNow++;
 			deltaT = 7;
 		} else
 			deltaT--;
 	}
-
-};
+}

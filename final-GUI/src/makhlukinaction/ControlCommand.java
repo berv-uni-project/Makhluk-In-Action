@@ -18,8 +18,6 @@ public class ControlCommand extends Thread {
     private ArrayList<Makhluk> al;
     /**makhluk player. */
     private Makhluk player;
-    /**Spawner makhluk. */
-    private MakhlukSpawn ms;
     /**board. */
     private Board board;
     /**default number of enemy makhluk spawned 18. */
@@ -33,7 +31,7 @@ public class ControlCommand extends Thread {
         al = new ArrayList<>();
         player = MakhlukPlayer.getPlayer();
         al.add(player);
-        ms = new MakhlukSpawn(al);
+        MakhlukSpawn ms = new MakhlukSpawn(al);
         ms.spawnMakhlukAntiAir(DEFAULT_MAKHLUK_SPAWNED);
         ms.spawnMakhlukBurukRupa(DEFAULT_MAKHLUK_SPAWNED);
         ms.spawnMakhlukMaling(DEFAULT_MAKHLUK_SPAWNED);

@@ -39,9 +39,8 @@ public class MakhlukTerbang extends Makhluk {
 	public void move() {
 		if (deltaT == 0) {
 			Random rand = new Random();
-			int r1, r2;
-			r1 = rand.nextInt(3) - 1;
-			r2 = rand.nextInt(3) - 1;
+			int r1 = rand.nextInt(3) - 1;
+			int r2 = rand.nextInt(3) - 1;
 			x = x + r1;
 			y = y + r2;
 			ageNow++;
@@ -49,5 +48,4 @@ public class MakhlukTerbang extends Makhluk {
 		} else
 			deltaT--;
 	}
-
-};
+}

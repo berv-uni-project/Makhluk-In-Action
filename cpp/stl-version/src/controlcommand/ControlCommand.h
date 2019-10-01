@@ -23,6 +23,7 @@ public:
 	Control();
 	Control(int, int);
 	Control(int, int, int);
+	Control(const Control &control);
 	~Control();
 	int TotalMakhlukinPetak();
 	int GetMaxTotalMakhluk();

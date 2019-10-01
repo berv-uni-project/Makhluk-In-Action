@@ -39,13 +39,13 @@ public class MakhlukMonster extends Makhluk {
 	public void move() {
 		if (deltaT == 0) {
 			Random rand = new Random();
-			int r1, r2;
-			r1 = rand.nextInt(3) - 1; // cek lagi benernya gimana
+			int r1 = rand.nextInt(3) - 1; // cek lagi benernya gimana
 			x = x + r1;
 			ageNow++;
 			deltaT = 10;
-		} else
+		} else {
 			deltaT--;
+		}
 	}
 
-};
+}

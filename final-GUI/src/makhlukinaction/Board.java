@@ -55,21 +55,10 @@ public final class Board extends JPanel implements ActionListener, KeyListener {
     private static int cheat = MA1;
     /**the score of game. */
     private int score = 0;
-
-    /**check move right. */
-    private boolean right = false;
-    /**check move up. */
-    private boolean up = false;
-    /**check move left. */
-    private boolean left = false;
-    /**check move down. */
-    private boolean down = false;
     /**check space. */
     private boolean space = false;
     /**array list from command control. */
     private ArrayList<Makhluk> al;
-    /**timer to start game. */
-    private final Timer timer;
 
     /**constructor of board.
      * @param al1 list */
@@ -78,7 +67,7 @@ public final class Board extends JPanel implements ActionListener, KeyListener {
         int g = 0;
         int b = 0;
         al = new ArrayList<Makhluk>();
-        timer = new Timer(REFRESH_TIME, this);
+        final Timer timer = new Timer(REFRESH_TIME, this);
         Color backgroundColor = new Color(r, g, b);
         setBackground(backgroundColor);
         al = al1;
@@ -130,10 +119,8 @@ public final class Board extends JPanel implements ActionListener, KeyListener {
         final int right1 = 102;
         final int top1 = 655;
         final int bottom1 = 545;
-        Makhluk m;
         Graphics2D g2 = (Graphics2D) g;
         Color b = new Color(RED1, GREEN1, BLUE1);
-        final int magic = 15;
         final int magic2 = 525;
         final int magic3 = 10;
         final int magic4 = 25;
@@ -172,7 +159,6 @@ public final class Board extends JPanel implements ActionListener, KeyListener {
     public void paintComponent(final Graphics g) {
         super.paintComponent(g);
         drawborder(g);
-        Graphics2D g2 = (Graphics2D) g;
         if (MakhlukPlayer.getPlayer().getAlive() && !MakhlukPlayer.
                 getMPlayer().getWin()) {
             for (int i = 0; i < al.size(); i++) {
@@ -232,6 +218,7 @@ public final class Board extends JPanel implements ActionListener, KeyListener {
 
     @Override
     public void keyTyped(final KeyEvent e) {
+        // System.out.println(e.getKeyCode());
     }
 
     @Override

@@ -18,36 +18,36 @@
 #include <thread>
 #include <vector>
 
-
 //PIC Unit Test : Jeremia Jason
 //Dibuat oleh : Jeremia Jason(Sebagian Besar), Joshua Salimin(Bagian input keyboard dari pengguna, Azzahid(Bagian fstream ke file eksternal)
 
-class Control {
-	public :
-		friend int main();
-		Control();
-		Control(int, int);
-		Control(int, int, int);
-		~Control();
-		int TotalMakhlukinPetak();
-		int GetMaxTotalMakhluk();
-		Makhluk* spawn();
-		Makhluk* spawn(int, int, int);
-		void MoveMakhluk(int x, int y);
-		void updateWorld(View V);
-		void PrintToFile(View);
-		void deleteMakhluk(Node*);
-		int AutoSpawn();
-		int AutoSpawn(int, int, int);
+class Control
+{
+public:
+	friend int main();
+	Control();
+	Control(int, int);
+	Control(int, int, int);
+	Control(const Control &control);
+	~Control();
+	int TotalMakhlukinPetak();
+	int GetMaxTotalMakhluk();
+	Makhluk *spawn();
+	Makhluk *spawn(int, int, int);
+	void MoveMakhluk(int x, int y);
+	void updateWorld(View V);
+	void PrintToFile(View);
+	void deleteMakhluk(Node *);
+	int AutoSpawn();
+	int AutoSpawn(int, int, int);
 
-	private :
-		ListMakhluk **Cell;
-		int nTotalMakhluk;
-		int panjang;
-		int lebar;
-		const int MaxTotalMakhluk;
-		Makhluk **Creature;
-
+private:
+	ListMakhluk **Cell;
+	int nTotalMakhluk;
+	int panjang;
+	int lebar;
+	const int MaxTotalMakhluk;
+	Makhluk **Creature;
 };
 
 #endif //CONTROL_H

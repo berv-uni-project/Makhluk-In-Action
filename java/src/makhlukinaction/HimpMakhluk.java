@@ -1,7 +1,7 @@
 package makhlukinaction;
 
 import java.util.*;
-import makhlukinaction.model.*;
+import makhlukinaction.model.Makhluk;
 
 /**
  * @author Joshua Salimin - 13514001
@@ -44,8 +44,7 @@ public class HimpMakhluk {
          */
 
         int temppower = al.get(0).getPowerLevel();
-        int id = al.get(0).getType();
-        int idxfound = 0;
+        int idxfound = al.get(0).getType();
         for (int j = 0; j < al.size(); ++j) {
             if (temppower < al.get(j).getPowerLevel()) {
                 temppower = al.get(j).getPowerLevel();
@@ -94,11 +93,7 @@ public class HimpMakhluk {
      * @return true/false boolean apakah true atau false
      */
     public boolean isFull() {
-        if (al.size() == MAX_MAKHLUK) {
-            return true;
-        } else {
-            return false;
-        }
+        return al.size() == MAX_MAKHLUK;
     }
 
     /**
@@ -162,7 +157,8 @@ public class HimpMakhluk {
         // dianggap dalam suatu array hanya terdapat 1 makhluk
         Makhluk M = null;
         int i = 0;
-        int px, py;
+        int px;
+        int py;
         boolean end = false;
         while (i < al.size() && !end) {
             px = al.get(i).getX();

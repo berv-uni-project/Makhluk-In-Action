@@ -12,6 +12,7 @@ Control::Control() : MaxTotalMakhluk(30)
 { /*! \var Control()
 	*\brief Ctor kelas Control dengan menginisialisasi seluruh atribut
 	*/
+	nTotalMakhluk = 0;
 	panjang = 10;
 	lebar = 10;
 
@@ -34,6 +35,7 @@ Control::Control(int _panjang, int _lebar) : MaxTotalMakhluk(_panjang * _lebar /
 	*\param _panjang panjang maksimum dari matriks
 	*\param _lebar lebar maksimum dari matriks
 	*/
+	nTotalMakhluk = 0;
 	lebar = _lebar;
 	panjang = _panjang;
 	Cell = new HimpMakhluk *[panjang];
@@ -56,6 +58,7 @@ Control::Control(int _panjang, int _lebar, int max) : MaxTotalMakhluk(max)
 	*\param _lebar lebar maksimum dari matriks
 	*\param max maksimum total makhluk
 	*/
+	nTotalMakhluk = 0;
 	lebar = _lebar;
 	panjang = _panjang;
 	Cell = new HimpMakhluk *[panjang];
@@ -68,6 +71,30 @@ Control::Control(int _panjang, int _lebar, int max) : MaxTotalMakhluk(max)
 	for (int i = 0; i < MaxTotalMakhluk; i++)
 	{
 		Creature[i] = Nil;
+	}
+}
+
+Control::Control(const Control &control) : MaxTotalMakhluk(control.MaxTotalMakhluk)
+{
+	/*! \var Control(int _panjang, int _lebar, int max)
+	*\brief Ctor dengan 3 parameter
+	*\param _panjang panjang maksimum dari matriks
+	*\param _lebar lebar maksimum dari matriks
+	*\param max maksimum total makhluk
+	*/
+	nTotalMakhluk = control.nTotalMakhluk;
+	lebar = control.lebar;
+	panjang = control.panjang;
+	Cell = new HimpMakhluk *[panjang];
+	for (int i = 0; i < panjang; i++)
+	{
+		Cell[i] = new HimpMakhluk[lebar];
+	}
+
+	Creature = new Makhluk *[MaxTotalMakhluk];
+	for (int i = 0; i < MaxTotalMakhluk; i++)
+	{
+		*Creature[i] = *control.Creature[i];
 	}
 }
 
@@ -206,7 +233,6 @@ void Control::MoveMakhluk(int i, int j)
 	*\param j merupakan posisi y
 	*/
 
-	bool exit = false;
 	if (Cell[i][j].isEmpty() == false)
 	{
 		while (Cell[i][j].isOver())
@@ -216,6 +242,7 @@ void Control::MoveMakhluk(int i, int j)
 		}
 
 		Makhluk *M;
+		bool exit = false;
 		do
 		{
 			M = Cell[i][j].checkMoveMakhluk(i, j);
@@ -288,7 +315,7 @@ void Control::AutoSpawn()
 	*\brief Untuk melakukan autospawn dan dimasukkan ke dalam list creature
 	*/
 	int i = 0;
-	while ((Creature[i] != Nil) && (i < MaxTotalMakhluk))
+	while ((i < MaxTotalMakhluk) && (Creature[i] != Nil))
 	{
 		i++;
 	}
@@ -315,7 +342,7 @@ void Control::PrintToFile(View V)
 			while (it != Cell[i][j].GetLast())
 			{
 				SS << V.GetBentuk((*it)->gettype());
-				it++;
+				++it;
 			}
 
 			unsigned int n = Cell[i][j].GetnMakhluk();
@@ -424,7 +451,7 @@ void Control::start()
 	cout << "Semua makhluk telah mati" << endl;
 	cout << "      GAME OVER" << endl;
 	cout << "========================" << endl
-			 << endl;
+		 << endl;
 	cout << "Press any key to exit" << endl;
 	system("pause>nul");
 }

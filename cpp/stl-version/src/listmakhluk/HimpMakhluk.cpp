@@ -164,24 +164,19 @@ Makhluk *HimpMakhluk::checkMoveMakhluk(int x, int y)
 	*/
 	Makhluk *M = NULL;
 	bool end = false;
-	int Px;
-	int Py;
 	vector<Makhluk *>::iterator it = Mem.begin();
 	int i = 1;
 	int size = Mem.size();
 	while ((i <= size) && (end == false))
 	{
-		Px = (*it)->getX();
-		Py = (*it)->getY();
-
-		if (((Px != x) || (Py != y)))
+		if ((((*it)->getX() != x) || ((*it)->getY() != y)))
 		{
 			M = DeleteMakhluk((*it));
 			end = true;
 		}
 		else
 		{
-			it++;
+			++it;
 			i++;
 		}
 	}
