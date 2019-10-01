@@ -1,5 +1,6 @@
 # Makhluk In Action
 
+[![Build Status](https://travis-ci.org/berv-uni-project/Makhluk-In-Action.svg?branch=master)](https://travis-ci.org/berv-uni-project/Makhluk-In-Action)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6872f42eb4234fbb9ae0bcd6141428d9)](https://app.codacy.com/app/berviantoleo/Makhluk-In-Action?utm_source=github.com&utm_medium=referral&utm_content=berv-uni-project/Makhluk-In-Action&utm_campaign=Badge_Grade_Settings)
 
 For learning and study purpose.
@@ -9,11 +10,11 @@ This repository for learning Object Oriented Programming. In this repository hav
 
 This repository have many version, to direct that version can click link below :
 
-* [CPP - STL version](src/c++/stl-version), this version is using library in cpp exactly Vector for the data structured and that management.
-* [CPP - Non STL version](src/c++/default-version), this version is using make own data structured and management.
-* [CPP - Thread version](src/c++/thread-version), this version is using STL version but use multi-Thread in this app.
-* [Java version](src/java), this version is translate from STL version cpp to Java.
-* [Mini Game](src/final-GUI), this version is complete mini game with GUI and using swing Java. We have many change in this version from old version include data structured and program structure.
+* [CPP - STL version](cpp/stl-version), this version is using library in cpp exactly Vector for the data structured and that management.
+* [CPP - Non STL version](cpp/default-version), this version is using make own data structured and management.
+* [CPP - Thread version](cpp/thread-version), this version is using STL version but use multi-Thread in this app.
+* [Java version](java), this version is translate from STL version cpp to Java.
+* [Mini Game](final-GUI), this version is complete mini game with GUI and using swing Java. We have many change in this version from old version include data structured and program structure.
  
 ## About Us
 Creator of this application :
