@@ -9,14 +9,6 @@ import java.awt.Graphics;
  * */
 public final class MakhlukPlayer extends Makhluk {
 
-    /**const direction for case 1.*/
-    private static final int DIR1 = 1;
-    /**const direction for case 2.*/
-    private static final int DIR2 = 2;
-    /**const direction for case 3.*/
-    private static final int DIR3 = 3;
-    /**const direction for case 4.*/
-    private static final int DIR4 = 4;
     /** known static x location of player.*/
     private static int xPlayer;
     /** known static y location of player.*/
@@ -105,6 +97,9 @@ public final class MakhlukPlayer extends Makhluk {
     /**return makhluk player of this game.
      * @return player*/
     public static Makhluk getPlayer() {
+        if (player == null) {
+            player = new MakhlukPlayer();
+        }
         return player;
     }
 
@@ -115,6 +110,9 @@ public final class MakhlukPlayer extends Makhluk {
    /**return makhluk player of this game.
      * @return player*/
     public static MakhlukPlayer getMPlayer() {
+        if (player == null) {
+            player = new MakhlukPlayer();
+        }
         return player;
     }
      /** draw the shape of Makhluk.

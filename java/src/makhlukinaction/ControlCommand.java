@@ -4,10 +4,12 @@ import java.io.FileNotFoundException;
 import java.util.Random;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import makhlukinaction.model.*;
+import makhlukinaction.model.Makhluk;
+import makhlukinaction.model.MakhlukAntiAir;
+import makhlukinaction.model.MakhlukBurukRupa;
+import makhlukinaction.model.MakhlukMaling;
+import makhlukinaction.model.MakhlukMonster;
+import makhlukinaction.model.MakhlukTerbang;
 
 /**
  * @author Bervianto Leo P - 13514047
@@ -220,6 +222,7 @@ public class ControlCommand {
 			break;
 		default:
 			M = new MakhlukAntiAir(baris, kolom);
+			break;
 		}
 		cells[baris][kolom].addMakhluk(M);
 		nTotalMakhluk++;
