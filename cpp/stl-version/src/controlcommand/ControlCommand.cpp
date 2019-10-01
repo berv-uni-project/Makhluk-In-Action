@@ -74,7 +74,7 @@ Control::Control(int _panjang, int _lebar, int max) : MaxTotalMakhluk(max)
 	}
 }
 
-Control::Control(const Control &control)
+Control::Control(const Control &control) : MaxTotalMakhluk(control.MaxTotalMakhluk)
 {
 	/*! \var Control(int _panjang, int _lebar, int max)
 	*\brief Ctor dengan 3 parameter
@@ -91,8 +91,8 @@ Control::Control(const Control &control)
 		Cell[i] = new HimpMakhluk[lebar];
 	}
 
-	Creature = new Makhluk *[control.MaxTotalMakhluk];
-	for (int i = 0; i < control.MaxTotalMakhluk; i++)
+	Creature = new Makhluk *[MaxTotalMakhluk];
+	for (int i = 0; i < MaxTotalMakhluk; i++)
 	{
 		*Creature[i] = *control.Creature[i];
 	}
