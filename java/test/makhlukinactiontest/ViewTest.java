@@ -56,7 +56,6 @@ public class ViewTest {
         assertTrue(true);
         // tidak dapat di assert karena tidak dapat dibandingkan (hanya berisi
         // System.out.println)
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -72,8 +71,5 @@ public class ViewTest {
         assertEquals('$', instance.getBentuk(3));
         assertEquals('@', instance.getBentuk(4));
         assertEquals('~', instance.getBentuk(5));
-        // TODO review the generated test code and remove the default call to fail.
-
     }
-
 }

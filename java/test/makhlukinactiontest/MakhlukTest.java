@@ -11,32 +11,38 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import makhlukinaction.model.*;
-import static org.junit.Assert.*;
-
+import makhlukinaction.model.Makhluk;
+import makhlukinaction.model.MakhlukAntiAir;
+import makhlukinaction.model.MakhlukBurukRupa;
+import makhlukinaction.model.MakhlukMaling;
+import makhlukinaction.model.MakhlukMonster;
+import makhlukinaction.model.MakhlukTerbang;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 /**
  *
  * @author Joshua
  */
 public class MakhlukTest {
 
-    public MakhlukTest() {
-    }
-
     @BeforeClass
     public static void setUpClass() {
+        // setup
     }
 
     @AfterClass
     public static void tearDownClass() {
+        // setup
     }
 
     @Before
     public void setUp() {
+        // setup
     }
 
     @After
     public void tearDown() {
+        // setup
     }
 
     /**
@@ -51,11 +57,6 @@ public class MakhlukTest {
         Makhluk M4 = new MakhlukMonster();
         Makhluk M5 = new MakhlukTerbang();
         // hanya untuk junit
-        //M.deltaT = 0;
-        //M2.deltaT = 0;
-        //M3.deltaT = 0;
-        //M4.deltaT = 0;
-        //M5.deltaT = 0;
         M.move();
         M2.move();
         M3.move();
@@ -66,10 +67,9 @@ public class MakhlukTest {
         System.out.println(M3.getX() + " " + M.getY());
         System.out.println(M4.getX() + " " + M.getY());
         System.out.println(M5.getX() + " " + M.getY());
-        // TODO review the generated test code and remove the default call to fail.
         // tidak dapat melakukan assert karena fungsi random namun sudah dicek dapat
         // melakukan random
-
+        assertTrue(true);
     }
 
     /**
@@ -88,7 +88,6 @@ public class MakhlukTest {
         assertEquals(M3.getPowerLevel(), 75);
         assertEquals(M4.getPowerLevel(), 100);
         assertEquals(M5.getPowerLevel(), 70);
-        // TODO review the generated test code and remove the default call to fail.\
     }
 
     /**
@@ -107,7 +106,6 @@ public class MakhlukTest {
         assertEquals(M3.getAge(), 40);
         assertEquals(M4.getAge(), 60);
         assertEquals(M5.getAge(), 30);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -126,7 +124,6 @@ public class MakhlukTest {
         assertEquals(M3.getAgeNow(), 0);
         assertEquals(M4.getAgeNow(), 0);
         assertEquals(M5.getAgeNow(), 0);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -151,7 +148,6 @@ public class MakhlukTest {
         assertEquals(c, 5);
         assertEquals(d, 10);
         assertEquals(e, 3);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -170,7 +166,6 @@ public class MakhlukTest {
         assertEquals(M3.getType(), 3);
         assertEquals(M4.getType(), 4);
         assertEquals(M5.getType(), 5);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -189,7 +184,6 @@ public class MakhlukTest {
         assertEquals(M3.getX(), 0);
         assertEquals(M4.getX(), 0);
         assertEquals(M5.getX(), 0);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -208,7 +202,6 @@ public class MakhlukTest {
         assertEquals(M3.getY(), 0);
         assertEquals(M4.getY(), 0);
         assertEquals(M5.getY(), 0);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     public class MakhlukImpl extends Makhluk {
