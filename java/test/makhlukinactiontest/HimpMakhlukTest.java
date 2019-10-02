@@ -49,7 +49,6 @@ public class HimpMakhlukTest {
         Makhluk M = new MakhlukAntiAir();
         HimpMakhluk instance = new HimpMakhluk();
         instance.addMakhluk(M);
-        // TODO review the generated test code and remove the default call to fail.
         System.out.println("Tipe Makhluk Test: " + instance.getMakhlukin(0).getType());
         assertEquals(instance.getMakhlukin(0), M);
         assertEquals(1, instance.getMakhlukin(0).getType());
@@ -76,7 +75,6 @@ public class HimpMakhlukTest {
         System.out.println("Tipe Makhluk SurvFight: " + Mhasil.getType());
         assertEquals(Mhasil.getType(), M2.getType());
         System.out.println("Sucess");
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -94,7 +92,6 @@ public class HimpMakhlukTest {
         System.out.println(instance.getNMakhluk());
         assertEquals(1, instance.getNMakhluk());
         System.out.println("Sucess");
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -111,7 +108,6 @@ public class HimpMakhlukTest {
         assertEquals(expResult, result);
         System.out.println("Sucess");
         // maksimal penuh adalah 1
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -127,7 +123,6 @@ public class HimpMakhlukTest {
         // mengetes apakah benar yang di return adalah makhluk anti air dengan type =1
         assertEquals(1, instance.getMakhlukin(0).getType());
         System.out.println("Sucess");
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -144,7 +139,6 @@ public class HimpMakhlukTest {
         int expResult = 2;
         int result = instance.getNMakhluk();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -154,11 +148,9 @@ public class HimpMakhlukTest {
     public void testGetMaxMakhluk() {
         System.out.println("GetMaxMakhluk");
         HimpMakhluk instance = new HimpMakhluk();
-        int expResult = 0;
         int result = instance.getMaxMakhluk();
         // 1 merupakan nilai maksimum pada arraylist
         assertEquals(1, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -175,7 +167,6 @@ public class HimpMakhlukTest {
         boolean expResult = true;
         boolean result = instance.isOver();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -188,7 +179,6 @@ public class HimpMakhlukTest {
         boolean expResult = true;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -205,7 +195,5 @@ public class HimpMakhlukTest {
         instance.addMakhluk(M);
         Makhluk result = instance.checkMoveMakhluk(x, y);
         assertEquals(M, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
-
 }

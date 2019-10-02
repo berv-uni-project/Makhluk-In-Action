@@ -5,7 +5,6 @@ package makhlukinactiontest;
  * and open the template in the editor.
  */
 
-import java.util.Random;
 import java.io.IOException;
 import java.util.Scanner;
 import makhlukinaction.*;

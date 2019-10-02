@@ -5,37 +5,37 @@
  */
 package makhluk;
 
-import java.awt.Graphics;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Bervianto Leo P
  */
 public class MakhlukBurukRupaTest {
-    
-    public MakhlukBurukRupaTest() {
-    }
-    
+
     @BeforeClass
     public static void setUpClass() {
+         // setup
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
+        // remove
     }
-    
+
     @Before
     public void setUp() {
+         // another class setup
     }
-    
+
     @After
     public void tearDown() {
+         // another class tear down
     }
 
     /**
@@ -44,5 +44,6 @@ public class MakhlukBurukRupaTest {
     @Test
     public void testDraw() {
         System.out.println("draw");
+        assertTrue(true);
     }
 }
