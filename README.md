@@ -11,20 +11,20 @@ This repository for learning Object Oriented Programming. In this repository hav
 
 This repository have many version, to direct that version can click link below :
 
-    * [CPP - STL version](cpp/stl-version), this version is using library in cpp exactly Vector for the data structured and that management.
-    * [CPP - Non STL version](cpp/default-version), this version is using make own data structured and management.
-    * [CPP - Thread version](cpp/thread-version), this version is using STL version but use multi-Thread in this app.
-    * [Java version](java), this version is translate from STL version cpp to Java.
-    * [Mini Game](final-GUI), this version is complete mini game with GUI and using swing Java. We have many change in this version from old version include data structured and program structure.
+* [CPP - STL version](cpp/stl-version), this version is using library in cpp exactly Vector for the data structured and that management.
+* [CPP - Non STL version](cpp/default-version), this version is using make own data structured and management.
+* [CPP - Thread version](cpp/thread-version), this version is using STL version but use multi-Thread in this app.
+* [Java version](java), this version is translate from STL version cpp to Java.
+* [Mini Game](final-GUI), this version is complete mini game with GUI and using swing Java. We have many change in this version from old version include data structured and program structure.
 
 ## About Us
 
 Creator of this application :
 
-    1. Joshua Salimin - 13514001 | [Go To Profile](http://github.com/JoshuaSalimin) 
-    2. Jeremia Jason Lasiman - 13514021 | [Go To Profile](http://github.com/JeremiaJ)
-    3. Bervianto Leo P - 13514047 | [Go To Profile](http://github.com/berviantoleo) | [External Profile - Facebook](https://www.facebook.com/profile.php?id=100000330768325)
-    4. Muhammad Az-zahid Adhitya Silparensi - 13514095 | [Go To Profile](http://github.com/Azzahid)
+1. Joshua Salimin - 13514001 | [Go To Profile](http://github.com/JoshuaSalimin) 
+2. Jeremia Jason Lasiman - 13514021 | [Go To Profile](http://github.com/JeremiaJ)
+3. Bervianto Leo P - 13514047 | [Go To Profile](http://github.com/berviantoleo) | [External Profile - Facebook](https://www.facebook.com/profile.php?id=100000330768325)
+4. Muhammad Az-zahid Adhitya Silparensi - 13514095 | [Go To Profile](http://github.com/Azzahid)
 
 ## Tell If Have Problem
 
