@@ -1,6 +1,7 @@
 # Makhluk In Action
 
-[![Build Status](https://travis-ci.org/berv-uni-project/Makhluk-In-Action.svg?branch=master)](https://travis-ci.org/berv-uni-project/Makhluk-In-Action)
+![Java CI with Gradle](https://github.com/berv-uni-project/Makhluk-In-Action/workflows/Java%20CI%20with%20Gradle/badge.svg)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6872f42eb4234fbb9ae0bcd6141428d9)](https://app.codacy.com/app/berviantoleo/Makhluk-In-Action?utm_source=github.com&utm_medium=referral&utm_content=berv-uni-project/Makhluk-In-Action&utm_campaign=Badge_Grade_Settings)
 
 For learning and study purpose.
