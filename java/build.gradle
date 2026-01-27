@@ -3,8 +3,6 @@ plugins {
     id 'application' 
 }
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
 version = '1.0.0'
 
 sourceSets {
@@ -22,7 +20,7 @@ sourceSets {
 }
 
 application {
-    mainClassName = 'makhlukinaction.Main'
+    mainClass = 'makhlukinaction.Main'
 }
 
 task testJavadoc(type: Javadoc) {
