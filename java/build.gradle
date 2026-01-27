@@ -20,7 +20,7 @@ sourceSets {
 }
 
 application {
-    mainClassName = 'makhlukinaction.Main'
+    mainClass = 'makhlukinaction.Main'
 }
 
 task testJavadoc(type: Javadoc) {
